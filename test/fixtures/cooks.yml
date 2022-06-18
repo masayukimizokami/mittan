@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cookname: MyString
+  cookurl: MyString
+  image: MyString
+  pr: MyText
+  cost: MyString
+  recom: MyString
+  cookingday: 2022-06-19
+  point: 1
+  standby: MyString
+
+two:
+  cookname: MyString
+  cookurl: MyString
+  image: MyString
+  pr: MyText
+  cost: MyString
+  recom: MyString
+  cookingday: 2022-06-19
+  point: 1
+  standby: MyString

@@ -1,0 +1,67 @@
+<%= form_with(model: cook) do |form| %>
+  <% if cook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cook.errors.count, "error") %> prohibited this cook from being saved:</h2>
+
+      <ul>
+        <% cook.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cookname %>
+    <%= form.text_field :cookname %>
+  </div>
+
+   <div class="field">
+        <%= form.label :イメージ %><br>
+        <%= form.file_field :image %>
+    </div>
+
+  <div class="field">
+    <%= form.label :cookurl %>
+    <%= form.text_field :cookurl %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pr %>
+    <%= form.text_area :pr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.text_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recom %>
+    <%= form.text_field :recom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cookingday %>
+    <%= form.date_select :cookingday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :point %>
+    <%= form.number_field :point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :standby %>
+    <%= form.text_field :standby %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

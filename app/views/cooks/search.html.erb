@@ -1,0 +1,31 @@
+<p>検索結果だよ</p>
+
+<div class="index-area-box">
+      <div class="index-area-box">
+        <table>
+          <tbody>
+              <div class="dogrun-index-list">
+                <% @results.each do |cook| %>
+                  <%= link_to cook_path(cook) do %>
+                      <tbody>  
+                          <tr id="dogrun_<%= cook.id %>">
+                             <td><%= image_tag cook.image ,class: 'dogrun-image' %></td>                   
+                                <td class='dogrun-index-name'>
+                                    <%= link_to cook_path(cook) do%>
+                                        <%= cook.cookname %>
+                                    <% end %>
+                                </td>
+                                <td><%= cook.pr %></td>
+                                <td><%= cook.standby %></td>
+                            
+                          </tr>
+                      </tbody>
+                  <% end %>
+                <% end %>
+              <div>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>    
+    <br>

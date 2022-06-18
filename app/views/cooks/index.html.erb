@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cookname</th>
+      <th>Cookurl</th>
+      <th>Image</th>
+      <th>Pr</th>
+      <th>Cost</th>
+      <th>Recom</th>
+      <th>Cookingday</th>
+      <th>Point</th>
+      <th>Standby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cooks.each do |cook| %>
+      <tr>
+        <td><%= cook.cookname %></td>
+        <td><%= cook.cookurl %></td>
+        <% if cook.image.attached? %>
+          <%= image_tag cook.image ,class: 'comment-user-image' %>
+        <% else %>
+          <%= image_tag 'no-image.user.png' ,class: 'comment-user-image'%>
+        <% end %>
+        <td><%= cook.pr %></td>
+        <td><%= cook.cost %></td>
+        <td><%= cook.recom %></td>
+        <td><%= cook.cookingday %></td>
+        <td><%= cook.point %></td>
+        <td><%= cook.standby %></td>
+        <td><%= link_to 'Show', cook %></td>
+        <td><%= link_to 'Edit', edit_cook_path(cook) %></td>
+        <td><%= link_to 'Destroy', cook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cook', new_cook_path %>
