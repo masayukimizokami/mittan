@@ -1,4 +1,47 @@
+<div class="container-area">
+  <div class="container-box">
 <h1>検索結果</h1>
+
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=未定&commit=検索" do %>
+            <p>未定</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=準備OK&commit=検索" do %>
+            <p>準備OK</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=済み&commit=検索" do %>
+            <p>済み</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=安上がり&commit=検索" do %>
+            <p>安上がり</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=簡単&commit=検索" do %>
+            <p>簡単</p>
+        <% end %>
+    </div>
+     <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=豪華&commit=検索" do %>
+            <p>豪華</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=手の込んだ&commit=検索" do %>
+            <p>手の込んだ</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=作り置き可&commit=検索" do %>
+            <p>作り置き可</p>
+        <% end %>
+    </div>
 
 <div class="index-area-box">
       <div class="index-area-box">
@@ -37,3 +80,5 @@
       </div>
     </div>    
     <br>
+</div>
+</div>

@@ -1,3 +1,5 @@
+<div class="container-area">
+  <div class="container-box">
 
 <div class= "header">
     <h1>居酒屋みったん</h1>
@@ -12,9 +14,25 @@
       <%= link_to 'topページ', top_cooks_path %>
     </div>
     <div class = "area-box">
-            <%= link_to "/cooks/search?q%5Bdogrun_recom=みったんお気に入り&commit=検索" do %>
-              <p>みったんおすすめ</p>
-
-            <% end %>
-          </div>
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=みったんお気に入り&commit=検索" do %>
+            <p>みったんおすすめ</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=まちお気に入り&commit=検索" do %>
+            <p>まちおすすめ</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=2人共お気に入り&commit=検索" do %>
+            <p>2人ともお気に入り</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=安上がり_or_簡単&commit=検索" do %>
+            <p>コスパ最強</p>
+        <% end %>
+    </div>
+</div>
+</div>
 </div>
