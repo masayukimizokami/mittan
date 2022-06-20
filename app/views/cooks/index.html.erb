@@ -18,21 +18,18 @@
     </tr>
   </thead>
 
+<div class="index-comment-area">
+  <div class="index-comment-box">
   <tbody>
     <% @cooks.each do |cook| %>
       <tr>
         <td><%= cook.cookname %></td>
         <td><%= cook.cookurl %></td>
         <% if cook.image.attached? %>
-          <%= image_tag cook.image ,class: 'comment-user-image' %>
+          <%= image_tag cook.image ,class: 'cook-image' %>
         <% else %>
-          <%= image_tag 'no-image.user.png' ,class: 'comment-user-image'%>
+          <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
         <% end %>
-        <td><%= cook.pr %></td>
-        <td><%= cook.cost %></td>
-        <td><%= cook.recom %></td>
-        <td><%= cook.cookingday %></td>
-        <td><%= cook.point %></td>
         <td><%= cook.standby %></td>
         <td><%= link_to 'Show', cook %></td>
         <td><%= link_to 'Edit', edit_cook_path(cook) %></td>
@@ -41,7 +38,11 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
 
 <br>
+
+
 
 <%= link_to 'New Cook', new_cook_path %>

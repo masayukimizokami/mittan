@@ -11,54 +11,62 @@
     </div>
   <% end %>
 
+  <div class="actions">
+    <%= form.submit "保存" %>
+  </div>
+
   <div class="field">
-    <%= form.label :cookname %>
+    <%= form.label :メニュー名（必須） %>
+   <br> 
     <%= form.text_field :cookname %>
   </div>
 
+  <div class="field">
+    <%= form.label :予定（必須） %>
+     <br> 
+    <%= form.select :standby,[ ["未定", "未定"],["準備OK", "準備OK"], ["済み", "済み"]], include_blank: "選択して下さい"  %>
+  </div>
+
    <div class="field">
-        <%= form.label :イメージ %><br>
+        <%= form.label :写真 %><br>
+         <br> 
         <%= form.file_field :image %>
     </div>
 
   <div class="field">
-    <%= form.label :cookurl %>
+    <%= form.label :URL %>
+     <br> 
     <%= form.text_field :cookurl %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :pr %>
+    <%= form.label :メモ（材料など） %>
+     <br> 
     <%= form.text_area :pr %>
   </div>
 
   <div class="field">
-    <%= form.label :cost %>
-    <%= form.text_field :cost %>
+    <%= form.label :コスパ %>
+     <br> 
+    <%= form.select :cost,[ ["", ""],["安上がり", "安上がり"], ["簡単", "簡単"], ["豪華", "豪華"], ["手の込んだ", "手の込んだ"], ["作り置き可", "作り置き可"]], include_blank: "選択して下さい"  %>
   </div>
 
   <div class="field">
-    <%= form.label :recom %>
-    <%= form.text_field :recom %>
+    <%= form.label :お気に入り %>
+     <br> 
+    <%= form.select :recom,[ ["", ""],["みったんお気に入り", "みったんお気に入り"], ["まちお気に入り", "まちお気に入り"], ["2人共お気に入り", "2人共お気に入り"]], include_blank: "選択して下さい"  %>
   </div>
 
   <div class="field">
-    <%= form.label :cookingday %>
+    <%= form.label :作成日 %>
+     <br> 
     <%= form.date_select :cookingday %>
   </div>
 
   <div class="field">
-    <%= form.label :point %>
+    <%= form.label :ポイント %>
+     <br> 
     <%= form.number_field :point %>
-  </div>
-
-  <div class="field">
-    <%= form.label :standby %>
-    <%= form.text_field :standby %>
   </div>
 
   <div class="actions">

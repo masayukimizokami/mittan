@@ -1,4 +1,4 @@
-<p>検索結果だよ</p>
+<h1>検索結果</h1>
 
 <div class="index-area-box">
       <div class="index-area-box">
@@ -9,7 +9,11 @@
                   <%= link_to cook_path(cook) do %>
                       <tbody>  
                           <tr id="dogrun_<%= cook.id %>">
-                             <td><%= image_tag cook.image ,class: 'dogrun-image' %></td>                   
+                             <% if cook.image.attached? %>
+                                <%= image_tag cook.image ,class: 'cook-image' %>
+                              <% else %>
+                                <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
+                              <% end %>                  
                                 <td class='dogrun-index-name'>
                                     <%= link_to cook_path(cook) do%>
                                         <%= cook.cookname %>
@@ -17,6 +21,10 @@
                                 </td>
                                 <td><%= cook.pr %></td>
                                 <td><%= cook.standby %></td>
+                                <td><%= cook.cost %></td>
+                                <td><%= cook.recom %></td>
+                                <td><%= cook.cookingday %></td>
+                                <td><%= cook.point %></td>
                             
                           </tr>
                       </tbody>
