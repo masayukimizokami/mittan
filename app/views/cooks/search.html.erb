@@ -8,77 +8,79 @@
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bcook_recom=準備OK&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=準備OK&commit=検索" do %>
             <p>準備OK</p>
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=済み&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=済み&commit=検索" do %>
             <p>済み</p>
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=安上がり&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=未定&commit=安上がり" do %>
             <p>安上がり</p>
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=簡単&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=簡単&commit=検索" do %>
             <p>簡単</p>
         <% end %>
     </div>
      <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=豪華&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=豪華&commit=検索" do %>
             <p>豪華</p>
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=手の込んだ&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=手の込んだ&commit=検索" do %>
             <p>手の込んだ</p>
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=作り置き可&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=作り置き可&commit=検索" do %>
             <p>作り置き可</p>
         <% end %>
     </div>
 
-<div class="index-area-box">
-      <div class="index-area-box">
-        <table>
-          <tbody>
-              <div class="dogrun-index-list">
-                <% @results.each do |cook| %>
-                  <%= link_to cook_path(cook) do %>
-                      <tbody>  
-                          <tr id="dogrun_<%= cook.id %>">
-                             <% if cook.image.attached? %>
-                                <%= image_tag cook.image ,class: 'cook-image' %>
-                              <% else %>
-                                <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
-                              <% end %>                  
-                                <td class='dogrun-index-name'>
-                                    <%= link_to cook_path(cook) do%>
-                                        <%= cook.cookname %>
-                                    <% end %>
-                                </td>
-                                <td><%= cook.pr %></td>
-                                <td><%= cook.standby %></td>
-                                <td><%= cook.cost %></td>
-                                <td><%= cook.recom %></td>
-                                <td><%= cook.cookingday %></td>
-                                <td><%= cook.point %></td>
-                            
-                          </tr>
-                      </tbody>
-                  <% end %>
-                <% end %>
-              <div>
-            
-          </tbody>
-        </table>
-      </div>
-    </div>    
-    <br>
+<!---->
+<div class="index-comment-area">
+    <% @results.each do |cook| %>
+    <div class="index-comment-box">
+      <div class = "boxbr">
+        </div>
+      <div class = "boxleft">
+          <% if cook.image.attached? %>
+            <%= image_tag cook.image ,class: 'cook-image' %>
+          <% else %>
+            <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
+          <% end %>
+        </div>
+        <div class = "boxright">
+            <h3><%= cook.cookname %></h3>
+            <%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %>
+            <p><%= cook.standby %></p>
+            <p><%= link_to '詳細', cook %>
+            <%= link_to '編集', edit_cook_path(cook) %>
+            <%= link_to '削除', cook, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <br>
+         </div>
+         </div>
+          <% end %>
+          <!--行変えるため-->
+        <div class = "boxbr">
+        </div>
+
+</div>
+
+<br>
+
+
+
+<%= link_to 'メニューを追加する', new_cook_path %>
+
+<!---->
+
+
 </div>
 </div>
