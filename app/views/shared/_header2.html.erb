@@ -1,0 +1,31 @@
+<div class="container-area">
+  <div class="container-box">
+    <div class = "area-box">
+        <%= link_to new_cook_path do %>
+            <p>メニュー追加</p>
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=みったんお気に入り&commit=検索" do %>
+            <p>おすすめA</p>
+            
+        <% end %>
+    </div>
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=まちお気に入り&commit=検索" do %>
+            <p>おすすめB</p>
+        <% end %>
+    </div>
+    <!--<div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=2人共お気に入り&commit=検索" do %>
+            <p>2人ともお気に入り</p>
+        <% end %>
+    </div>-->
+    <div class = "area-box">
+        <%= link_to "/cooks/search?q%5Bdogrun_recom=安上がり_or_簡単&commit=検索" do %>
+            <p>コスパ最強</p>
+        <% end %>
+    </div>
+</div>
+</div>
+</div>

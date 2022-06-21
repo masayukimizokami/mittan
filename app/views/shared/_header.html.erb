@@ -2,37 +2,20 @@
   <div class="container-box">
 
 <div class= "header">
-    <h1>居酒屋みったん</h1>
+     <%= link_to "/cooks/search?q%5Bdogrun_recom=みったんお気に入り&commit=検索" do %>
+            <h1>居酒屋</h1>
+        <% end %>
     <div id="header-search-box" >
       <%= search_form_for @q, url: search_cooks_path do |f| %>   
         <%= f.search_field :cookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont ,placeholder: "フリー検索",class:'search_field' %>
         <%= f.submit '検索',class:'search_submit' %>
       <% end %>
       <%= link_to 'メニュー追加', new_cook_path %>
-      <%= link_to 'メニュー一覧', cooks_path %>
-      <%= link_to '検索結果', search_cooks_path %>
-      <%= link_to 'topページ', top_cooks_path %>
+      <!--<%= link_to 'メニュー一覧', cooks_path %>-->
+     <!-- <%= link_to '検索結果', search_cooks_path %>-->
+      <!--<%= link_to 'topページ', top_cooks_path %>-->
     </div>
-    <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=みったんお気に入り&commit=検索" do %>
-            <p>みったんおすすめ</p>
-        <% end %>
-    </div>
-    <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=まちお気に入り&commit=検索" do %>
-            <p>まちおすすめ</p>
-        <% end %>
-    </div>
-    <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=2人共お気に入り&commit=検索" do %>
-            <p>2人ともお気に入り</p>
-        <% end %>
-    </div>
-    <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bdogrun_recom=安上がり_or_簡単&commit=検索" do %>
-            <p>コスパ最強</p>
-        <% end %>
-    </div>
+   
 </div>
 </div>
 </div>

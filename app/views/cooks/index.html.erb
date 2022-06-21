@@ -2,51 +2,43 @@
   <div class="container-box">
 <p id="notice"><%= notice %></p>
 
-<h1>Cooks</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Cookname</th>
-      <th>Cookurl</th>
-      <th>Image</th>
-      <th>Pr</th>
-      <th>Cost</th>
-      <th>Recom</th>
-      <th>Cookingday</th>
-      <th>Point</th>
-      <th>Standby</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>メニュー一覧</h1>
 
 <div class="index-comment-area">
-  <div class="index-comment-box">
-  <tbody>
+
+   
     <% @cooks.each do |cook| %>
-      <tr>
-        <td><%= cook.cookname %></td>
-        <td><%= cook.cookurl %></td>
-        <% if cook.image.attached? %>
-          <%= image_tag cook.image ,class: 'cook-image' %>
-        <% else %>
-          <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
-        <% end %>
-        <td><%= cook.standby %></td>
-        <td><%= link_to 'Show', cook %></td>
-        <td><%= link_to 'Edit', edit_cook_path(cook) %></td>
-        <td><%= link_to 'Destroy', cook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
+    <div class="index-comment-box">
+      <div class = "boxbr">
+        </div>
+      <div class = "boxleft">
+          <% if cook.image.attached? %>
+            <%= image_tag cook.image ,class: 'cook-image' %>
+          <% else %>
+            <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
+          <% end %>
+        </div>
+        <div class = "boxright">
+            <h3><%= cook.cookname %></h3>
+            <%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %>
+            <p><%= cook.standby %></p>
+            <p><%= link_to '詳細', cook %>
+            <%= link_to '編集', edit_cook_path(cook) %>
+            <%= link_to '削除', cook, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <br>
+         </div>
+         </div>
+          <% end %>
+          <!--行変えるため-->
+        <div class = "boxbr">
+        </div>
+
 </div>
 
 <br>
 
 
 
-<%= link_to 'New Cook', new_cook_path %>
+<%= link_to 'メニューを追加する', new_cook_path %>
 </div>
 </div>
