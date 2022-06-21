@@ -3,18 +3,20 @@
 
 <div class= "header">
      <%= link_to "/cooks/search?q%5Bdogrun_recom=みったんお気に入り&commit=検索" do %>
-            <h1>居酒屋</h1>
+            <%= image_tag 'ロゴ.jpg' ,class: 'logo-image'%>
         <% end %>
+        <br>
     <div id="header-search-box" >
       <%= search_form_for @q, url: search_cooks_path do |f| %>   
         <%= f.search_field :cookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont ,placeholder: "フリー検索",class:'search_field' %>
         <%= f.submit '検索',class:'search_submit' %>
       <% end %>
-      <%= link_to 'メニュー追加', new_cook_path %>
+      <!--<%= link_to 'メニュー追加', new_cook_path %>-->
       <!--<%= link_to 'メニュー一覧', cooks_path %>-->
      <!-- <%= link_to '検索結果', search_cooks_path %>-->
       <!--<%= link_to 'topページ', top_cooks_path %>-->
     </div>
+    <br>
    
 </div>
 </div>
