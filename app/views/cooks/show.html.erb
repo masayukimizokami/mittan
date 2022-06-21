@@ -2,52 +2,63 @@
   <div class="container-box">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Cookname:</strong>
+<div class = "show-box">
+<h1>
   <%= @cook.cookname %>
-</p>
+</h1>
 
 <p>
-  <strong>Cookurl:</strong>
-  <%= @cook.cookurl %>
+  <h4>レシピURL:</h4>
+  <%= Rinku.auto_link(@cook.cookurl, :all, 'target="_blank"').html_safe %>
 </p>
 
+<% if @cook.image.attached? %>
+    <%= image_tag @cook.image ,class: 'cook-show-image' %>
+<% else %>
+    <%= image_tag 'no-image.user.png' ,class: 'cook-show-image'%>
+<% end %>
+<table>
+<tr>
 <p>
-  <strong>Image:</strong>
-  <%= @cook.image %>
+  <th><strong>コスパ</strong></th>
+  <td><%= @cook.cost %></td>
 </p>
-
+</tr>
+<tr>
 <p>
-  <strong>Pr:</strong>
-  <%= @cook.pr %>
+  <th><strong>推し！</strong></th>
+  <td><%= @cook.recom %></td>
 </p>
-
+</tr>
+<tr>
 <p>
-  <strong>Cost:</strong>
-  <%= @cook.cost %>
+  <th><strong>いつ？</strong></th>
+  <td><%= @cook.cookingday %></td>
 </p>
+</tr>
 
-<p>
-  <strong>Recom:</strong>
-  <%= @cook.recom %>
-</p>
-
-<p>
-  <strong>Cookingday:</strong>
-  <%= @cook.cookingday %>
-</p>
-
-<p>
+<!--<p>
   <strong>Point:</strong>
   <%= @cook.point %>
-</p>
+</p>-->
 
+<tr>
 <p>
-  <strong>Standby:</strong>
-  <%= @cook.standby %>
+  <th><strong>準備:</strong></th>
+  <td><%= @cook.standby %></td>
 </p>
+</tr>
+<div class= "nothing"></div>
+<tr>
+<p>
+  <th><strong>memo!:</strong></th>
+  <td><%= @cook.pr %></td>
+</p>
+</table>
 
-<%= link_to 'Edit', edit_cook_path(@cook) %> |
-<%= link_to 'Back', cooks_path %>
+<%= link_to '編集する', edit_cook_path(@cook) %> |
+<%= link_to '削除', @cook, method: :delete, data: { confirm: '本当に削除しますか?' } %></p>|
+<%= link_to '一覧に戻る', cooks_path %>
+</div>
 </div>
 </div>

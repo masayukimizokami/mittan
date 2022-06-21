@@ -1,0 +1,55 @@
+<div class="container-area">
+    <div class="container-box">
+  <p id="notice"><%= notice %></p>
+  
+  <h1>
+    <%= @cook.cookname %>
+  </h1>
+  
+  <p>
+    <h4>レシピURL:</h4>
+    <%= Rinku.auto_link(@cook.cookurl, :all, 'target="_blank"').html_safe %>
+  </p>
+  
+  <% if @cook.image.attached? %>
+      <%= image_tag @cook.image ,class: 'cook-show-image' %>
+  <% else %>
+      <%= image_tag 'no-image.user.png' ,class: 'cook-show-image'%>
+  <% end %>
+  
+  <p>
+    <strong>memo!:</strong>
+    <%= @cook.pr %>
+  </p>
+  
+  <p>
+    <strong>パフォオーマンス！:</strong>
+    <%= @cook.cost %>
+  </p>
+  
+  <p>
+    <strong>推し！:</strong>
+    <%= @cook.recom %>
+  </p>
+  
+  <p>
+    <strong>食べた日！:</strong>
+    <%= @cook.cookingday %>
+  </p>
+  
+  <!--<p>
+    <strong>Point:</strong>
+    <%= @cook.point %>
+  </p>-->
+  
+  <p>
+    <strong>スタンバイ！:</strong>
+    <%= @cook.standby %>
+  </p>
+  
+  <%= link_to '編集する', edit_cook_path(@cook) %> |
+  <%= link_to '削除', @cook, method: :delete, data: { confirm: '本当に削除しますか?' } %></p>|
+  <%= link_to '一覧に戻る', cooks_path %>
+  </div>
+  </div>
+  

@@ -17,6 +17,7 @@
             <p>済み</p>
         <% end %>
     </div>
+    <br>
     <div class = "area-box">
         <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=未定&commit=安上がり" do %>
             <p>安上がり</p>
@@ -57,7 +58,7 @@
           <% end %>
         </div>
         <div class = "boxright">
-            <h3><%= cook.cookname %></h3>
+            <h1><%= cook.cookname %></h1>
             <%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %>
             <p><%= cook.standby %></p>
             <p><%= link_to '詳細', cook %>
