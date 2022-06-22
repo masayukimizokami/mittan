@@ -13,7 +13,7 @@ class CooksController < ApplicationController
   end
 
   def search
-    # @results = @q.result
+    @results = @q.result
   end
 
   # GET /cooks/1 or /cooks/1.json
