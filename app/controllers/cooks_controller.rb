@@ -1,5 +1,5 @@
 class CooksController < ApplicationController
-  before_action :set_cook, only: %i[ show edit update destroy]
+
   before_action :set_q
   # GET /cooks or /cooks.json
 
@@ -18,6 +18,7 @@ class CooksController < ApplicationController
 
   # GET /cooks/1 or /cooks/1.json
   def show
+    @cook = Cook.find(params[:id])
   end
 
   # GET /cooks/new
@@ -27,6 +28,7 @@ class CooksController < ApplicationController
 
   # GET /cooks/1/edit
   def edit
+    @cook = Cook.find(params[:id])
   end
 
   # POST /cooks or /cooks.json
@@ -46,6 +48,7 @@ class CooksController < ApplicationController
 
   # PATCH/PUT /cooks/1 or /cooks/1.json
   def update
+    @cook = Cook.find(params[:id])
     respond_to do |format|
       if @cook.update(cook_params)
         format.html { redirect_to cook_url(@cook), notice: "メニューが更新されました." }
@@ -59,6 +62,7 @@ class CooksController < ApplicationController
 
   # DELETE /cooks/1 or /cooks/1.json
   def destroy
+    @cook = Cook.find(params[:id])
     @cook.destroy
 
     respond_to do |format|
@@ -68,10 +72,6 @@ class CooksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cook
-      @cook = Cook.find(params[:id])
-    end
 
     # Only allow a list of trusted parameters through.
     def cook_params
