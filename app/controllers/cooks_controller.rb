@@ -3,7 +3,10 @@ class CooksController < ApplicationController
   before_action :set_q
   # GET /cooks or /cooks.json
 
-  def top; end
+  def top 
+    @cooks = Cook.all
+    @random = @cooks.order("RANDOM()").limit(3)
+  end
   
   def index
     @cooks = Cook.all
@@ -32,7 +35,7 @@ class CooksController < ApplicationController
 
     respond_to do |format|
       if @cook.save
-        format.html { redirect_to cook_url(@cook), notice: "Cook was successfully created." }
+        format.html { redirect_to cook_url(@cook), notice: "メニューが保存されました." }
         format.json { render :show, status: :created, location: @cook }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -45,7 +48,7 @@ class CooksController < ApplicationController
   def update
     respond_to do |format|
       if @cook.update(cook_params)
-        format.html { redirect_to cook_url(@cook), notice: "Cook was successfully updated." }
+        format.html { redirect_to cook_url(@cook), notice: "メニューが更新されました." }
         format.json { render :show, status: :ok, location: @cook }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -59,7 +62,7 @@ class CooksController < ApplicationController
     @cook.destroy
 
     respond_to do |format|
-      format.html { redirect_to cooks_url, notice: "Cook was successfully destroyed." }
+      format.html { redirect_to cooks_url, notice: "メニューが削除されました." }
       format.json { head :no_content }
     end
   end
@@ -72,7 +75,7 @@ class CooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cook_params
-      params.require(:cook).permit(:cookname, :cookurl, :image, :pr, :cost, :recom, :cookingday, :point, :standby)
+      params.require(:cook).permit(:cookname, :cookurl, :image, :pr, :cost, :recom, :date, :point, :standby)
     end
 
     def set_q

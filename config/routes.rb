@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources:user
   get 'lesson/hello'
   get 'lesson/good'
-  root 'cooks#top'
+  root 'cooks#index'
 end

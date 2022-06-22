@@ -1,7 +1,8 @@
+<div class = "form_box">
 <%= form_with(model: cook) do |form| %>
   <% if cook.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(cook.errors.count, "error") %> prohibited this cook from being saved:</h2>
+      <h2><%= pluralize(cook.errors.count, "error") %> 保存に失敗しました。:</h2>
 
       <ul>
         <% cook.errors.each do |error| %>
@@ -60,16 +61,17 @@
   <div class="field">
     <%= form.label :作成日 %>
      <br> 
-    <%= form.date_select :cookingday %>
+    <%= form.date_select :date %>
   </div>
 
-  <div class="field">
+  <!--<div class="field">
     <%= form.label :ポイント %>
      <br> 
     <%= form.number_field :point %>
-  </div>
+  </div>-->
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "保存"%>
   </div>
 <% end %>
+</div>
