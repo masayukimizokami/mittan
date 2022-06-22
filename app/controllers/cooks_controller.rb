@@ -75,7 +75,7 @@ class CooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cook_params
-      params.require(:cook).permit(:cookname, :cookurl, :image, :pr, :cost, :recom, :date, :point, :standby)
+      params.require(:cook).permit(:cookname, :cookurl, :image, :pr, :cost, :recom, :date, :point, :standby, :cookingday)
     end
 
     def set_q
