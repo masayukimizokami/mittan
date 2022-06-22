@@ -7,13 +7,13 @@
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to top_cooks_path do %>
+        <%= link_to "/cooks/search?q%5Bstandby_cont%5D=みったんお気に入り&commit=検索" do %>
         <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB5Xqqs2oSrRqS8kPazB0t5VT49gXifMFpIQ&usqp=CAU' ,class: 'button-image'%>
             <p>準備OK</p>
         <% end %>
     </div>
     <div class = "area-box">
-        <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=みったんお気に入り&commit=検索" do %>
+        <%= link_to "/cooks/search?q%5Bcookname_or_recom_cont%5D=みったんお気に入り&commit=検索" do %>
         <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLQ69Przd6bxbkgoOebndTDlmypHw31CO8eg&usqp=CAU' ,class: 'button-image'%>
             <p>たん推し</p>
         <% end %>

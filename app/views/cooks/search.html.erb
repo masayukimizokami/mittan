@@ -6,25 +6,25 @@
 
         <div class = "recom_box">
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=未定&commit=検索" do %>
+                <%= link_to cooks_path do %>
+                    <%= image_tag '' ,class: 'button-image'%>
+                    <p>一覧</p>
+                <% end %>
+            </div>
+            <div class = "area-box">
+                <%= link_to "/cooks/search?q%5Bstandby_cont%5D=未定&commit=検索" do %>
                 <%= image_tag '' ,class: 'button-image'%>
                     <p>未定</p>
                 <% end %>
             </div>
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=準備OK&commit=検索" do %>
-                    <%= image_tag '' ,class: 'button-image'%>
-                    <p>準備OK</p>
-                <% end %>
-            </div>
-            <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=済み&commit=検索" do %>
+                <%= link_to "/cooks/search?q%5Bstandby_cont%5D=済み&commit=検索" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>済み</p>
                 <% end %>
             </div>
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=安上がり&commit=安上がり" do %>
+                <%= link_to "/cooks/search?q%5Bcookname_or_cost_cont%5D=安上がり&commit=安上がり" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>コスパ</p>
                 <% end %>
@@ -32,31 +32,31 @@
         </div>
         <div class = "recom_box">
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=簡単&commit=検索" do %>
+                <%= link_to "/cooks/search?q%5Bcookname_or_cost_standby_cont%5D=簡単&commit=検索" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>簡単</p>
                 <% end %>
             </div>
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=豪華&commit=検索" do %>
+                <%= link_to "/cooks/search?q%5Bcookname_or_cost_cont%5D=豪華&commit=検索" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>豪華</p>
                 <% end %>
             </div>
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=手の込んだ&commit=検索" do %>
+                <%= link_to "/cooks/search?q%5Bcookname_or_cost_cont%5D=手の込んだ&commit=検索" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>手込み</p>
                 <% end %>
             </div>
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=作り置き可&commit=検索" do %>
+                <%= link_to "/cooks/search?q%5Bcookname_or_cost_cont%5D=作り置き可&commit=検索" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>作置き</p>
                 <% end %>
             </div>
             <div class = "area-box">
-                <%= link_to "/cooks/search?q%5Bcookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont%5D=作り置き可&commit=検索" do %>
+                <%= link_to "/cooks/search?q%5Brecom_cont%5D=作り置き可&commit=検索" do %>
                     <%= image_tag '' ,class: 'button-image'%>
                     <p>2人推し</p>
                 <% end %>
