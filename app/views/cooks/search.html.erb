@@ -64,29 +64,21 @@
         </div>
         <!--ここまでOK-->
 
-         <div class="index-comment-area">
-            <% @results.each do |cook| %>
-            <div class="index-comment-box">
-            <div class = "boxbr">
-                </div>
-            <div class = "boxleft">
-                <% if cook.image.attached? %>
-                    <%= image_tag cook.image ,class: 'cook-image' %>
-                <% else %>
-                    <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
+        <div class="dogrun-index-list">
+                <% @results.each do |cook| %>
+                  
+                      <tbody>  
+                          <tr id="cook_<%= cook.id %>">
+                           <h1><%= cook.cookname %></h1>
+                          </tr>
+                      </tbody>
+                  
                 <% end %>
-                </div>
-                <div class = "boxright">
-                    <h1><%= cook.cookname %></h1>
-                    
-                    <br>
-                </div>
-                </div>
-                <% end %>
-                <div class = "boxbr">
-                </div>
+              <div>
 
-            </div>
+              <!---->
+
+         
         <br>
         <%= link_to 'メニューを追加する', new_cook_path %>
 
