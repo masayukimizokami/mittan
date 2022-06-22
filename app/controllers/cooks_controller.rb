@@ -1,5 +1,5 @@
 class CooksController < ApplicationController
-  before_action :set_cook, only: %i[ show edit update destroy ]
+  before_action :set_cook, only: %i[ show edit update destroy]
   before_action :set_q
   # GET /cooks or /cooks.json
 
