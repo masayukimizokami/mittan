@@ -7,6 +7,7 @@
   <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlh5YxgH60jWmlMuaKkdAFe5chMDQuHUCqQ&usqp=CAU' ,class: 'top-image'%>
 </div>
 <h3>最新MENU一覧</h3>
+<h6>メニュー数 : <%= @cooks.count%></h6>
 
 <div class="index-comment-area">
     <% @cooks.each do |cook| %>

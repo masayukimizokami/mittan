@@ -2,7 +2,7 @@
     <div class="container-box">
         
         <h1>検索結果</h1>
-      <%= @path%>
+        <h6>メニュー数 : <%= @results.count%></h6>
         <% case @path%>
             <% when '/cooks/search?q%5Bstandby_cont%5D=%E6%BA%96%E5%82%99OK&commit=%E6%A4%9C%E7%B4%A2' %>
                 <h3>準備OK</h3>
@@ -91,7 +91,7 @@
             </div>
         </div>
         <!--ここまでOK-->
-
+        <br>
          <div class="index-comment-area">
             <% @results.each do |cook| %>
             <div class="index-comment-box">
