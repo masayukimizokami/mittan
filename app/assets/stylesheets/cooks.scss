@@ -40,6 +40,12 @@ header{
   border-radius: 10%;
   object-fit: cover;
   margin: 0 20px;
+  transition: transform .3s ease;/* ゆっくり変化させる */
+  cursor: pointer;
+  max-width: 100px;
+}
+.logo-image:hover{
+  transform: scale(1.4);/* 拡大 */
 }
 .button-image{
   width: 50px;
@@ -49,7 +55,7 @@ header{
   padding: 0 5px;
   transition: transform .3s ease;/* ゆっくり変化させる */
   cursor: pointer;
-  max-width: 500px;
+  max-width: 100px;
 }
 
 .button-image:hover{
@@ -105,6 +111,12 @@ h3{
   border-radius: 10%;
   object-fit: cover;
   margin: 20px;
+  transition: transform .3s ease;/* ゆっくり変化させる */
+  cursor: pointer;
+  max-width: 100px;
+}
+.cook-image:hover{
+  transform: scale(1.4);/* 拡大 */
 }
 
 .index-comment-box{

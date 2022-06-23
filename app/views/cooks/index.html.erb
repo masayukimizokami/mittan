@@ -15,11 +15,13 @@
       <div class = "boxbr">
         </div>
       <div class = "boxleft">
+        <%= link_to cook do %>
           <% if cook.image.attached? %>
             <%= image_tag cook.image ,class: 'cook-image' %>
           <% else %>
             <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
           <% end %>
+        <% end %>
           <p class = "standby"><%= cook.standby %></p>
         </div>
         <div class = "boxright">
