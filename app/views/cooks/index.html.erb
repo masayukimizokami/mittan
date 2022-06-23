@@ -1,8 +1,11 @@
 <div class="container-area">
   <div class="container-box">
 <p id="notice"><%= notice %></p>
-
-<h1>MENU一覧</h1>
+<div class = "topbox">
+  <h1 class = "welcome">ようこそ！</h1>
+  <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlh5YxgH60jWmlMuaKkdAFe5chMDQuHUCqQ&usqp=CAU' ,class: 'top-image'%>
+</div>
+<h3>最新MENU一覧</h3>
 
 <div class="index-comment-area">
     <% @cooks.each do |cook| %>

@@ -47,6 +47,13 @@ header{
   border-radius: 50%;
   object-fit: cover;
   padding: 0 5px;
+  transition: transform .3s ease;/* ゆっくり変化させる */
+  cursor: pointer;
+  max-width: 500px;
+}
+
+.button-image:hover{
+  transform: scale(1.4);/* 拡大 */
 }
 
 main{
@@ -58,8 +65,28 @@ main{
   margin: 0;
   z-index: 20;
 }
-
+.top-image{
+  width: 270px;
+  height: auto;
+  border-radius: 0%;
+  object-fit: cover;
+  margin: 10px;
+} 
+.topbox{
+  position: relative;
+}
+.welcome{
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+  color: white;
+}
 h1{
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+  color: rgb(41, 43, 45);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+h3{
   font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
   color: rgb(41, 43, 45);
 }
