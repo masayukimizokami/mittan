@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :families
   resources :cooks do
     collection do
       get 'search'

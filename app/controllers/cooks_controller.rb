@@ -6,6 +6,8 @@ class CooksController < ApplicationController
   def top 
     @cooks = Cook.all
     @random = @cooks.order("RANDOM()").limit(3)
+    @families = Family.all
+    @rnd = @families.order("RANDOM()").limit(1)
   end
   
   def index
