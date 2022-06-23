@@ -14,6 +14,8 @@ class CooksController < ApplicationController
 
   def search
     @results = @q.result
+    @path = request.fullpath
+    @url = request.url
   end
 
   # GET /cooks/1 or /cooks/1.json

@@ -8,7 +8,7 @@
         <br>
     <div id="header-search-box" >
       <%= search_form_for @q, url: search_cooks_path do |f| %>   
-        <%= f.search_field :cookname_or_pr_or_cost_or_recom_or_cookingday_or_standby_cont ,placeholder: "フリー検索",class:'search_field' %>
+        <%= f.search_field :cookname_or_pr_or_cost_cont ,placeholder: "フリー検索",class:'search_field' %>
         <%= f.submit '検索',class:'search_submit' %>
       <% end %>
       <!--<%= link_to 'メニュー追加', new_cook_path %>-->
