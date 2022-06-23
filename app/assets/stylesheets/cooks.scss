@@ -75,10 +75,6 @@ main{
 .topbox{
   position: relative;
 }
-.welcome{
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
-  color: white;
-}
 h1{
   font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
   color: rgb(41, 43, 45);
@@ -87,7 +83,15 @@ h1{
   font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
   color: rgb(41, 43, 45);
   position: absolute;
+  color: white !important;
   top: 10px;
+  left: 10px;
+}
+.welcome2{
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+  color: white !important;
+  position: absolute;
+  top: 55px;
   left: 10px;
 }
 h3{
