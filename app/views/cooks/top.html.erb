@@ -1,56 +1,35 @@
 <div class="container-area">
   <div class="container-box">
 
-
-<h1>本日の</h1>
-<h1>おすすめ３選！!</h1>
-
-    <!--s-->
-<div class="index-comment-area">
-   <% @rnd.each do |family| %>
-
+    <h1>本日の</h1>
+    <h1>おすすめ３選！!</h1>
+    <div class="index-comment-area">
     <div class="index-comment-box">
       <div class = "boxbr">
-        </div>
-      <div class = "boxleft">
-            <%= image_tag family.image ,class: 'cook-image' %>
-          <p class = "standby"><%= family.family_name %></p>
-        </div>
-
-          <% end %>
-          <!--行変えるため-->
+      </div>
+        <!--左近次-->
+        <!--<div class="index-comment-area">-->
+              <div class = "commentleft">
+              <% @rnd.each do |family| %>
+                <% image_tag family.image ,class: 'cook-image' %>
+                <p class = "standby"><% family.family_name %></p>
+              <% end %>
+              </div>
+       
+                <!--コメント-->
+    <!--<div class="index-comment-area">-->
+          <div class = "commentright">
+          <% @rnddg.each do |dogrun| %>
+          <br><br>
+            <p class = "standby"><% dogrun.dogrun_name %></p>
+          </div>
+        <% end %>
         <div class = "boxbr">
         </div>
+    </div>
 
-</div>
-    <!--e-->
-
-        <!--s-->
-<div class="index-comment-area">
-   <% @rnddg.each do |dogrun| %>
-
-    <div class="index-comment-box">
-      <div class = "boxbr">
-        </div>
-      <div class = "boxleft">
-          <p class = "standby"><%= dogrun.dogrun_name %></p>
-        </div>
-
-          <% end %>
-          <!--行変えるため-->
-        <div class = "boxbr">
-        </div>
-
-</div>
-    <!--e-->
-
-<div class="index-comment-area">
+<!--<div class="index-comment-area">-->
    <% @random.each do |cook| %>
-
-
-
-
-
     <div class="index-comment-box">
       <div class = "boxbr">
         </div>
