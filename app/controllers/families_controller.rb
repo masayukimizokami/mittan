@@ -26,7 +26,7 @@ class FamiliesController < ApplicationController
 
     respond_to do |format|
       if @family.save
-        format.html { redirect_to family_url(@family), notice: "Family was successfully created." }
+        format.html { redirect_to family_url(@family), notice: "保存されました." }
         format.json { render :show, status: :created, location: @family }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class FamiliesController < ApplicationController
   def update
     respond_to do |format|
       if @family.update(family_params)
-        format.html { redirect_to family_url(@family), notice: "Family was successfully updated." }
+        format.html { redirect_to family_url(@family), notice: "保存されました." }
         format.json { render :show, status: :ok, location: @family }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class FamiliesController < ApplicationController
     @family.destroy
 
     respond_to do |format|
-      format.html { redirect_to families_url, notice: "Family was successfully destroyed." }
+      format.html { redirect_to families_url, notice: "familyは削除されました." }
       format.json { head :no_content }
     end
   end

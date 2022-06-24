@@ -26,7 +26,7 @@ class DogrunsController < ApplicationController
 
     respond_to do |format|
       if @dogrun.save
-        format.html { redirect_to dogrun_url(@dogrun), notice: "Dogrun was successfully created." }
+        format.html { redirect_to dogrun_url(@dogrun), notice: "保存されました." }
         format.json { render :show, status: :created, location: @dogrun }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class DogrunsController < ApplicationController
   def update
     respond_to do |format|
       if @dogrun.update(dogrun_params)
-        format.html { redirect_to dogrun_url(@dogrun), notice: "Dogrun was successfully updated." }
+        format.html { redirect_to dogrun_url(@dogrun), notice: "保存されました." }
         format.json { render :show, status: :ok, location: @dogrun }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class DogrunsController < ApplicationController
     @dogrun.destroy
 
     respond_to do |format|
-      format.html { redirect_to dogruns_url, notice: "Dogrun was successfully destroyed." }
+      format.html { redirect_to dogruns_url, notice: "コメントは削除されました." }
       format.json { head :no_content }
     end
   end

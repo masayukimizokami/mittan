@@ -11,21 +11,24 @@
         <!--<div class="index-comment-area">-->
               <div class = "commentleft">
               <% @rnd.each do |family| %>
-                <% image_tag family.image ,class: 'cook-image' %>
-                <p class = "standby"><% family.family_name %></p>
+                <%= image_tag family.image ,class: 'family-image' %>
+                <p class="family" class = "standby"><%= family.family_name %><span class="tyan">ちゃんの<br>本日の</span>一押し！</p>
               <% end %>
               </div>
        
                 <!--コメント-->
     <!--<div class="index-comment-area">-->
           <div class = "commentright">
-          <% @rnddg.each do |dogrun| %>
-          <br><br>
-            <p class = "standby"><% dogrun.dogrun_name %></p>
+            <% @rnddg.each do |dogrun| %>
+            <br>
+            <div class="fukidashi">
+            <br>
+              <h1 class = "sankaku">▼</h1>
+              <p class = "comment_voice"><%= dogrun.dogrun_name %></p>
+              <br>
+            </div>
           </div>
         <% end %>
-        <div class = "boxbr">
-        </div>
     </div>
 
 <!--<div class="index-comment-area">-->
