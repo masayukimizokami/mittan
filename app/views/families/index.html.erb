@@ -16,10 +16,7 @@
     <% @families.each do |family| %>
       <tr>
         <td><%= family.family_name %></td>
-        <% if family.image.attached? %>
-        <td><%= image_tag family.image ,class: 'cook-image' %></td>
-        <% else %>
-        <% end %>
+        
         <td><%= family.family_pr %></td>
         <td><%= link_to 'Show', family %></td>
         <td><%= link_to 'Edit', edit_family_path(family) %></td>
