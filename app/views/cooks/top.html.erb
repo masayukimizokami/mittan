@@ -5,16 +5,16 @@
 <h1>本日の</h1>
 <h1>おすすめ３選！!</h1>
 
-    <!---->
-    <div class="index-comment-area">
+    <!--s-->
+<div class="index-comment-area">
    <% @rnd.each do |family| %>
 
     <div class="index-comment-box">
       <div class = "boxbr">
         </div>
       <div class = "boxleft">
-            <% image_tag family.image ,class: 'cook-image' %>
-          <p class = "standby"><% family.family_name %></p>
+            <%= image_tag family.image ,class: 'cook-image' %>
+          <p class = "standby"><%= family.family_name %></p>
         </div>
 
           <% end %>
@@ -23,7 +23,26 @@
         </div>
 
 </div>
-    <!---->
+    <!--e-->
+
+        <!--s-->
+<div class="index-comment-area">
+   <% @rnddg.each do |dogrun| %>
+
+    <div class="index-comment-box">
+      <div class = "boxbr">
+        </div>
+      <div class = "boxleft">
+          <p class = "standby"><%= dogrun.dogrun_name %></p>
+        </div>
+
+          <% end %>
+          <!--行変えるため-->
+        <div class = "boxbr">
+        </div>
+
+</div>
+    <!--e-->
 
 <div class="index-comment-area">
    <% @random.each do |cook| %>
