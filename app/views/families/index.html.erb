@@ -1,11 +1,74 @@
 <p id="notice"><%= notice %></p>
 
 <h1>良い子ポイント<br>ランキング</h1>
-
-<table>
+<table class = "rankpoint1">
 
   <tbody>
-        <% p = 1 %>
+    <% @families1.each  do |family| %>
+     <tbody class = "rankup">
+      <tr>
+        <td><span id = "rank">1位</span></td>
+        <% if family.image.attached? %>
+        <td><%= image_tag family.image ,class: 'cook-image' %></td>
+        <% else %>
+        <% end %>
+        <td><%= family.family_name %></td>
+        <td><%= family.point %><span class = "point_moji">point</span></td>
+        <td><%= link_to '詳細', family %></td>
+        <td><%= link_to '編集', edit_family_path(family) %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+<table>
+
+<!--2-->
+
+<table class = "rankpoint2">
+
+  <tbody>
+    <% @families2.each  do |family| %>
+     <tbody class = "rankup">
+      <tr>
+         <td><span id = "rank">2位</span></td>
+        <% if family.image.attached? %>
+        <td><%= image_tag family.image ,class: 'cook-image' %></td>
+        <% else %>
+        <% end %>
+        <td><%= family.family_name %></td>
+        <td><%= family.point %><span class = "point_moji">point</span></td>
+        <td><%= link_to '詳細', family %></td>
+        <td><%= link_to '編集', edit_family_path(family) %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+
+<!--3-->
+<table class = "rankpoint3">
+
+  <tbody>
+    <% @families3.each  do |family| %>
+     <tbody class = "rankup">
+      <tr>
+        <td><span id = "rank">3位</span></td>
+        <% if family.image.attached? %>
+        <td><%= image_tag family.image ,class: 'cook-image' %></td>
+        <% else %>
+        <% end %>
+        <td><%= family.family_name %></td>
+        <td><%= family.point %><span class = "point_moji">point</span></td>
+        <td><%= link_to '詳細', family %></td>
+        <td><%= link_to '編集', edit_family_path(family) %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+
+<!---->
+<table>
+  <tbody>
+        <% p = 4 %>
     <% @families.each  do |family| %>
      <tbody class = "rankup">
       <tr>

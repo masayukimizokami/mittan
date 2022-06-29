@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 //bootstrap
-header{
+header {
   display: flex;
   background-color: rgb(41, 40, 4);
   flex-direction: column;
@@ -12,7 +12,7 @@ header{
   margin: 0;
   z-index: 20;
 }
-.header2{
+.header2 {
   display: flex;
   background-color: rgb(41, 40, 4);
   flex-direction: column;
@@ -22,47 +22,47 @@ header{
   z-index: 20;
   color: aliceblue;
 }
-.header2 p{
+.header2 p {
   text-decoration: none;
   font-size: 12px;
   color: aliceblue;
 }
-.area-box{
+.area-box {
   float: left;
   width: 60px;
   text-decoration: none;
   padding: 0 5px;
   text-align: center;
 }
-.logo-image{
+.logo-image {
   width: 150px;
   height: auto;
   border-radius: 10%;
   object-fit: cover;
   margin: 0 20px;
-  transition: transform .3s ease;/* ゆっくり変化させる */
+  transition: transform 0.3s ease; /* ゆっくり変化させる */
   cursor: pointer;
   max-width: 100px;
 }
-.logo-image:hover{
-  transform: scale(1.4);/* 拡大 */
+.logo-image:hover {
+  transform: scale(1.4); /* 拡大 */
 }
-.button-image{
+.button-image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
   padding: 0 5px;
-  transition: transform .3s ease;/* ゆっくり変化させる */
+  transition: transform 0.3s ease; /* ゆっくり変化させる */
   cursor: pointer;
   max-width: 100px;
 }
 
-.button-image:hover{
-  transform: scale(1.4);/* 拡大 */
+.button-image:hover {
+  transform: scale(1.4); /* 拡大 */
 }
 
-main{
+main {
   display: flex;
   background-color: rgb(239, 228, 157);
   flex-direction: column;
@@ -71,130 +71,130 @@ main{
   margin: 0;
   z-index: 20;
 }
-.top-image{
+.top-image {
   width: 270px;
   height: auto;
   border-radius: 0%;
   object-fit: cover;
   margin: 10px;
-} 
-.topbox{
+}
+.topbox {
   position: relative;
 }
-h1{
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+h1 {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif !important;
   color: rgb(41, 43, 45);
 }
-.welcome{
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+.welcome {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif !important;
   color: rgb(41, 43, 45);
   position: absolute;
   color: white !important;
   top: 10px;
   left: 10px;
 }
-.welcome2{
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+.welcome2 {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif !important;
   color: white !important;
   position: absolute;
   top: 55px;
   left: 10px;
 }
-h3{
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
+h3 {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif !important;
   color: rgb(41, 43, 45);
 }
 
-.cook-image{
+.cook-image {
   width: 50px;
   height: 50px;
   border-radius: 10%;
   object-fit: cover;
   margin: 20px;
-  transition: transform .3s ease;/* ゆっくり変化させる */
+  transition: transform 0.3s ease; /* ゆっくり変化させる */
   cursor: pointer;
   max-width: 100px;
 }
-.cook-image:hover{
-  transform: scale(1.4);/* 拡大 */
+.cook-image:hover {
+  transform: scale(1.4); /* 拡大 */
 }
 
-.index-comment-box{
+.index-comment-box {
   width: 300px;
   background-color: aliceblue;
   display: flex;
 }
-.boxleft{
+.boxleft {
   float: left;
   width: 30%;
   height: auto;
   background-color: aliceblue;
 }
-.boxright{
+.boxright {
   float: left;
   width: 70%;
   height: auto;
   clear: both;
-  background-color:aliceblue;
+  background-color: aliceblue;
   overflow-wrap: break-word;
 }
-.url{
+.url {
   font-size: 5px;
 }
-.standby{
+.standby {
   font-size: 20px;
   text-align: center;
 }
-.boxbr{
+.boxbr {
   clear: both;
 }
 //show
-.show-box{
+.show-box {
   width: 300px;
   background-color: aliceblue;
   overflow-wrap: break-word;
 }
 
-.cook-show-image{
+.cook-show-image {
   width: 200px;
   height: auto;
   border-radius: 10%;
   object-fit: cover;
   margin: 20px;
-} 
-.show-box table{
+}
+.show-box table {
   width: 270px;
   margin: auto;
   font-size: 20px;
-  
-} 
-th{
+}
+th {
   width: 30px;
   font-size: 13px !important;
   background-color: #f4eee2;
   padding: 10px 20px;
-} 
-td{
+}
+td {
   font-size: 15px !important;
   background-color: #fbc25b;
   padding: 10px 20px;
 }
-.nothing{
+
+.nothing {
   background-color: #ccf;
   padding: 5px;
 }
-.edit_delete{
+.edit_delete {
   text-align: center;
 }
 //form
-.form_box{
+.form_box {
   width: 300px;
   background-color: aliceblue;
   overflow-wrap: break-word;
 }
-.actions{
+.actions {
   text-align: center;
 }
-.red{
+.red {
   color: red;
 }
