@@ -4,7 +4,7 @@ class FamiliesController < ApplicationController
 
   # GET /families or /families.json
   def index
-    @families = Family.all
+    @families = Family.order(point:"desc").last(20)
   end
 
   # GET /families/1 or /families/1.json

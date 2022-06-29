@@ -1,72 +1,79 @@
 // Place all the styles related to the families controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.commentleft{
-    float: left;
-    width: 40%;
-    height: auto;
-    background-color:rgb(239, 228, 157)
+.commentleft {
+  float: left;
+  width: 40%;
+  height: auto;
+  background-color: rgb(239, 228, 157);
 }
-.commentright{
-    float: left;
-    width: 60%;
-    height: auto;
-    clear: both;
-    background-color:rgb(239, 228, 157);
-    overflow-wrap: break-word;
+.commentright {
+  float: left;
+  width: 60%;
+  height: auto;
+  clear: both;
+  background-color: rgb(239, 228, 157);
+  overflow-wrap: break-word;
 }
-.family{
-    font-size: 19px;
-    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
-    color: rgb(41, 43, 45);
+.family {
+  font-size: 19px;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif !important;
+  color: rgb(41, 43, 45);
 }
-.tyan{
-    font-size: 10px;
-    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif !important;
-    color: rgb(41, 43, 45);
+.tyan {
+  font-size: 10px;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif !important;
+  color: rgb(41, 43, 45);
 }
-.family-image{
-    width: 90px;
-    height: 90px;
-    border-radius: 20%;
-    object-fit: cover;
-    margin: 10px;
-    cursor: pointer;
-    max-width: 100px;
-    transition: 2.0s;
-    transform: rotateZ( 0deg );
+.family-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 20%;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+  max-width: 100px;
+  transition: 2s;
+  transform: rotateZ(0deg);
 }
-.family-image:hover{
-    transform: rotateZ( 180deg );
+.family-image:hover {
+  transform: rotateZ(180deg);
 }
-.sankaku{
-    font-size: 20px;
-    color: white;
-    position: absolute;
-    top: 7px;
-    left: -10px;
+.sankaku {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 7px;
+  left: -10px;
 }
-.fukidashi{
-    background-color: white;
-    border-radius: 20%;
-    position: relative;
+.fukidashi {
+  background-color: white;
+  border-radius: 20%;
+  position: relative;
 }
 
-.comment_voice{
-    font-size: 15px;
-    padding: 3px 5px;
+.comment_voice {
+  font-size: 15px;
+  padding: 3px 5px;
 }
-.kakushibutton-image{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    padding: 0 5px;
-    transition: transform .3s ease;/* ゆっくり変化させる */
-    cursor: pointer;
-    max-width: 100px;
-  }
-  
-  .kakushibutton-image:hover{
-    transform: scale(2.7);/* 拡大 */
-  }
+.kakushibutton-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 0 5px;
+  transition: transform 0.3s ease; /* ゆっくり変化させる */
+  cursor: pointer;
+  max-width: 100px;
+}
+
+.kakushibutton-image:hover {
+  transform: scale(2.7); /* 拡大 */
+}
+.point_moji {
+  font-size: 5px;
+}
+#rank {
+  font-size: 27px !important;
+  color: rgb(16, 16, 101) !important;
+}
