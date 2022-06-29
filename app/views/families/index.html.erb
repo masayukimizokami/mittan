@@ -13,7 +13,7 @@
         <% else %>
         <% end %>
         <td><%= family.family_name %></td>
-       
+        <td><%= family.point %></td>
         <td><%= link_to '詳細', family %></td>
         <td><%= link_to '編集', edit_family_path(family) %></td>
         <td><%= link_to '削除', family, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
