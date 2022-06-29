@@ -15,6 +15,10 @@
   <strong>メモ:</strong>
   <%= @family.family_pr %>
 </p>
+<p>
+  <strong>良い子ポイント:</strong>
+  <%= @family.point %>
+</p>
 
 <%= link_to '編集', edit_family_path(@family) %> |
 <%= link_to 'Back', families_path %>
