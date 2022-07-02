@@ -1,5 +1,36 @@
 <h1>Editing Family</h1>
 
+   <div class="index-comment-area">
+      <div class="index-comment-box">
+        <table>  
+          <tbody>
+            <% if @scores.empty? %>
+              <br>
+              <tr>
+                <h5>現在、コメントはありません。</h5>
+              </tr>
+            <% else %>
+              <div>
+              <h5>最新ポイント</h5>
+                <% @scores.each do |score| %>
+                  <tr>
+                    <td class="comment-contents-name">
+                    <br>
+                    <%= score.family.family_name %></td>
+                    <br>
+                    <%= score.score %></td>
+                    <td class="comment-contents"><%= score.comment %></td>
+                    
+                    <td class="comment-contents-link">
+              
+                  </tr>
+                <% end %>
+              </div>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
 <%= render 'form', family: @family %>
 
 <%= link_to 'Show', @family %> |

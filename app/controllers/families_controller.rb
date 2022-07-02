@@ -24,6 +24,7 @@ class FamiliesController < ApplicationController
 
   # GET /families/1/edit
   def edit
+    @scores = Score.order(id:"desc").limit(1)
   end
 
   # POST /families or /families.json

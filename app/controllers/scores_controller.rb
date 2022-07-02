@@ -12,9 +12,9 @@ class ScoresController < ApplicationController
   end
 
   # GET /scores/new
-  def new
-    @score = Score.new
-  end
+  #def new
+   # @score = Score.new
+  #end
 
   # GET /scores/1/edit
   def edit
@@ -26,7 +26,7 @@ class ScoresController < ApplicationController
 
     respond_to do |format|
       if @score.save
-        format.html { redirect_to score_url(@score), notice: "Score was successfully created." }
+        format.html { redirect_to score_url(@score), notice: "ポイント登録されました." }
         format.json { render :show, status: :created, location: @score }
       else
         format.html { render :new, status: :unprocessable_entity }

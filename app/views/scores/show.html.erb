@@ -14,7 +14,5 @@
   <strong>Family:</strong>
   <%= @score.family_name %>
 </p>
+<%= link_to 'ポイントを付ける', edit_family_path(@score.family) %></td>
 
-<%= link_to '一覧へ', families_path %>
-<%= link_to 'Edit', edit_score_path(@score) %> |
-<%= link_to 'Back', scores_path %>
