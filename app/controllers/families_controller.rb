@@ -44,6 +44,7 @@ class FamiliesController < ApplicationController
 
   # PATCH/PUT /families/1 or /families/1.json
   def update
+     @scores = Score.order(id:"desc").limit(1)
     respond_to do |format|
       if @family.update(family_params)
         format.html { redirect_to family_url(@family), notice: "保存されました." }

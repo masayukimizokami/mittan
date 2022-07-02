@@ -3,10 +3,11 @@
 <h1>良い子ポイント<br>ランキング</h1>
 <!---->
 <h1>投稿一覧</h1>
+<h6>最新ポイント動向</h6>
     <div class="index-comment-area">
       <div class="index-comment-box">
         <table>  
-          <tbody>
+          <tbody crass = "rankup2">
             <% if @scores.empty? %>
               <br>
               <tr>
@@ -16,15 +17,9 @@
               <div>
                 <% @scores.each do |score| %>
                   <tr>
-                    <td class="comment-contents-name">
-                    <br>
-                    by <%= score.family.family_name %></td>
-                    <br>
-                    <%= score.score %></td>
-                    <td class="comment-contents"><%= score.comment %></td>
-                    
-                    <td class="comment-contents-link">
-              
+                    <td><%= score.family.family_name %>:</td>
+                    <td><%= score.score %>p:</td>
+                    <td><%= score.comment %></td>
                   </tr>
                 <% end %>
               </div>

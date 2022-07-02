@@ -20,12 +20,8 @@
   <%= @family.point %>
 </p>
 
-<%= link_to '編集', edit_family_path(@family) %> |
-<%= link_to '削除', @family, method: :delete, data: { confirm: '本当に削除しますか?' } %>|
-<%= link_to 'Back', families_path %>
-
 <!---->
-<h3>コメント新規投稿</h3>
+<h4>ポイント新規投稿</h4>
 <br>
 <div class="new-comment-area">
   <div class="new-comment-box">
@@ -33,15 +29,15 @@
       <div class = "comment-form-box">  
         <table>
           <tr>
-            <td><%= f.text_field :score, class:"posts-content" ,placeholder: "ポイント" %></td>
+            <td><%= f.text_field :score ,placeholder: "ポイント" %></td>
           </tr>
           <tr>
-            <td><%= f.text_field :comment, class:"posts-content" ,placeholder: "コメント" ,size: "50x5"%></td>
+            <td><%= f.text_field :comment ,placeholder: "コメント"%></td>
           </tr>        
         </table>
         <%= f.hidden_field :family_id, value: @family.id %>
         <div>
-          <%= f.submit "投稿を完了する"%>
+          <%= f.submit "ポイントを登録"%>
         </div>
       </div>
     <% end %>
@@ -51,7 +47,7 @@
 <br>
 
 <!---->
-<h3>投稿一覧</h3>
+<h4>投稿一覧</h4>
 <div class="index-comment">
   <div class="index-comment-table">
     <table>
@@ -63,6 +59,7 @@
           </tr>
         <% else %>
           <tr>
+            <th>日付</th>
             <th>ポイント</th>
             <th>コメント</th>
           </tr>
@@ -71,13 +68,11 @@
       <tbody>
         <% @scores.each do |score| %>
           <tr>
-          <td class="comment-title-show">
+          <td>
               <br><%= score.created_at.to_s(:datetime_jp) %></td>
-            <td class="comment-title-show">
+            <td>
               <br><%= score.score %></td>
-            <td class="comment-contents-show"><%= score.comment %></td>
-            <td class="comment-contents-link-show">
-            </td>
+            <td><%= score.comment %></td>
           </tr>
         <% end %>
       </tbody>
@@ -85,3 +80,7 @@
   </div>
 </div>
 <hr>
+
+<%= link_to '編集', edit_family_path(@family) %> 
+<%= link_to '削除', @family, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+<%= link_to 'Back', families_path %>
