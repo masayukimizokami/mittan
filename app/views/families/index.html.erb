@@ -1,6 +1,43 @@
 <p id="notice"><%= notice %></p>
 
 <h1>良い子ポイント<br>ランキング</h1>
+<!---->
+<h1>投稿一覧</h1>
+    <div class="index-comment-area">
+      <div class="index-comment-box">
+        <table>  
+          <tbody>
+            <% if @scores.empty? %>
+              <br>
+              <tr>
+                <h5>現在、コメントはありません。</h5>
+              </tr>
+            <% else %>
+              <div>
+                <% @scores.each do |score| %>
+                  <tr>
+                    <td class="comment-contents-name">
+                    <br>
+                    by <%= score.family.family_name %></td>
+                    <br>
+                    <%= score.score %></td>
+                    <td class="comment-contents"><%= score.comment %></td>
+                    
+                    <td class="comment-contents-link">
+                    
+                    
+                  </tr>
+                <% end %>
+              </div>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+
+<!---->
+
+
 <table class = "rankpoint1">
 
   <tbody>

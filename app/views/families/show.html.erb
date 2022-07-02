@@ -23,3 +23,65 @@
 <%= link_to '編集', edit_family_path(@family) %> |
 <%= link_to '削除', @family, method: :delete, data: { confirm: '本当に削除しますか?' } %>|
 <%= link_to 'Back', families_path %>
+
+<!---->
+<h3>コメント新規投稿</h3>
+<br>
+<div class="new-comment-area">
+  <div class="new-comment-box">
+    <%= form_with model: @score do |f| %>
+      <div class = "comment-form-box">  
+        <table>
+          <tr>
+            <td><%= f.text_field :score, class:"posts-content" ,placeholder: "ポイント" %></td>
+          </tr>
+          <tr>
+            <td><%= f.text_field :comment, class:"posts-content" ,placeholder: "コメント" ,size: "50x5"%></td>
+          </tr>        
+        </table>
+        <%= f.hidden_field :family_id, value: @family.id %>
+        <div>
+          <%= f.submit "投稿を完了する"%>
+        </div>
+      </div>
+    <% end %>
+    <br>
+  </div>
+</div>
+<br>
+
+<!---->
+<h3>投稿一覧</h3>
+<div class="index-comment">
+  <div class="index-comment-table">
+    <table>
+      <thead>
+        <% if @family.scores.empty? %>
+          <br>
+          <tr>
+            <h5>現在、コメントはありません。</h5>
+          </tr>
+        <% else %>
+          <tr>
+            <th>ポイント</th>
+            <th>コメント</th>
+          </tr>
+        <% end %>
+      </thead>
+      <tbody>
+        <% @scores.each do |score| %>
+          <tr>
+          <td class="comment-title-show">
+              <br><%= score.created_at.to_s(:datetime_jp) %></td>
+            <td class="comment-title-show">
+              <br><%= score.score %></td>
+            <td class="comment-contents-show"><%= score.comment %></td>
+            <td class="comment-contents-link-show">
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr>

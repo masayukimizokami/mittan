@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :scores
+  resources :points
   resources :dogruns
   resources :families
   resources :cooks do

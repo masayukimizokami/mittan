@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @score.score %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @score.comment %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @score.family_name %>
+</p>
+
+<%= link_to '一覧へ', families_path %>
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>

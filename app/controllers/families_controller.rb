@@ -8,10 +8,13 @@ class FamiliesController < ApplicationController
     @families2 = Family.order(point:"desc").offset(1).limit(1)
     @families3 = Family.order(point:"desc").offset(2).limit(1)
     @families = Family.order(point:"desc").offset(3)
+    @scores = Score.order(id:"desc").limit(2)
   end
 
   # GET /families/1 or /families/1.json
   def show
+    @score = Score.new # 新規コメント投稿
+    @scores = @family.scores.order(id: "DESC")
   end
 
   # GET /families/new
