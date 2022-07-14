@@ -1,0 +1,67 @@
+<%= form_with(model: pet) do |form| %>
+  <% if pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+        <% pet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.text_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pr %>
+    <%= form.text_area :pr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :letter %>
+    <%= form.text_area :letter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :letter2 %>
+    <%= form.text_area :letter2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :letter3 %>
+    <%= form.text_area :letter3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zzimage %>
+    <%= form.text_field :zzimage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :runimage %>
+    <%= form.text_field :runimage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -4,9 +4,9 @@ class FamiliesController < ApplicationController
 
   # GET /families or /families.json
   def index
-    @families1 = Family.order(point:"desc").order(:id).limit(1)
-    @families2 = Family.order(point:"desc").order(:id).offset(1).limit(1)
-    @families3 = Family.order(point:"desc").order(:id).offset(2).limit(1)
+    @families1 = Family.order(point:"desc").limit(1)
+    @families2 = Family.order(point:"desc").offset(1).limit(1)
+    @families3 = Family.order(point:"desc").offset(2).limit(1)
     @families = Family.order(point:"desc").offset(3)
     @scores = Score.order(id:"desc").limit(2)
   end
