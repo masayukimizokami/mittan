@@ -115,7 +115,8 @@
                     <h3><%= cook.cookname %></h3>
                     <p class = "url"><%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %></p>
                     <p><%= cook.standby %></p>
-                    <p><%= link_to '詳細', cook %>
+                    <p><%= cook.id %>
+                    <%= link_to '詳細', cook %>
                     <%= link_to '編集', edit_cook_path(cook) %>
                     <%= link_to '削除', cook, method: :delete, data: { confirm: 'Are you sure?' } %></p>
                     <br>
