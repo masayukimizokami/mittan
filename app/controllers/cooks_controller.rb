@@ -13,7 +13,7 @@ class CooksController < ApplicationController
   end
   
   def index
-    @cooks = Cook.order(id:"desc").first(20)
+    @results = Cook.order(id:"desc").first(20)
   end
 
   def search

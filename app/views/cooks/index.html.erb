@@ -7,43 +7,11 @@
   <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlh5YxgH60jWmlMuaKkdAFe5chMDQuHUCqQ&usqp=CAU' ,class: 'top-image'%>
 </div>
 <h3>最新MENU一覧!</h3>
-<h6>メニュー数 : <%= @cooks.count%></h6>
+<h6>メニュー数 : <%= @results.count%></h6>
 
-<div class="index-comment-area">
-    <% @cooks.each do |cook| %>
-    <div class="index-comment-box">
-      <div class = "boxbr">
-        </div>
-      <div class = "boxleft">
-          <% if cook.image.attached? %>
-            <%= image_tag cook.image ,class: 'cook-image' %>
-          <% else %>
-            <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
-          <% end %>
-          <p class = "standby"><%= cook.standby %></p>
-        </div>
-        <div class = "boxright">
-            <h3><%= cook.cookname %></h3>
-            <p class = "url"><%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %></p>
-            <p><%= link_to '詳細', cook %>
-            <%= link_to '編集', edit_cook_path(cook) %>
-            <%= link_to '削除', cook, method: :delete, data: { confirm: '本当に削除しますか?' } %></p>
-            <br>
-         </div>
-         </div>
-          <% end %>
-          <!--行変えるため-->
-
-        <div class = "boxbr">
-        </div>
-    </div>
-
-</div>
+<%= render 'shared/menuindex' %>
 
 <br>
-
-
-
 <%= link_to 'メニューを追加する', new_cook_path %>
 <br>
   <%= link_to families_path do %>
