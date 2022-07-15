@@ -5,8 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 .headerdogs {
-  font-family: "Sacramento", cursive;
-  background-color: rgb(255, 210, 30);
+  background-color: rgb(56, 255, 30);
   position: absolute;
   position: fixed;
   top: 0;
@@ -15,6 +14,11 @@
   height: 50px;
   color: aliceblue;
   text-align: center;
+}
+
+.headerdogs h1 {
+  font-family: "Sacramento", cursive !important;
+  color: aliceblue;
 }
 .mainrdogs {
   text-align: center;
