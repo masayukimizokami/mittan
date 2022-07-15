@@ -1,0 +1,103 @@
+<p id="notice"><%= notice %></p>
+
+<h1>やよっち</h1>
+
+<%= @time %>
+
+ <div class = "room-show-image">
+    <% @dogs.each do |dog| %>
+      
+        <p><%= dog.name %></p>
+    <% end %>
+        <% if @time >= "00" and @time <= "05" %>
+          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292691631_5289099191183561_5056513170435251074_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=1fglO3br-CcAX9sRPHG&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-ypzY6eMlDz_sAmaB_JDBx-Wfwifbor4Yi1yG_dKB94A&oe=62D7B085" , class:'fluffy' %>
+          <p>寝てる</p>
+        <% elsif @time = "6" %>
+          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292869923_5289100537850093_6910501712646870992_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=103&ccb=1-7&_nc_sid=da31f3&_nc_ohc=vD6fmyYpYcQAX-TCtTx&_nc_ht=scontent.fkix2-2.fna&oh=00_AT9uw6iC6jqRfJUyBRA_v3knXGhDIV0Rs580DcquvFCc0w&oe=62D5E750" , class:'fluffy' %>
+          <p>おはよう</p>
+        <% elsif @time = "7" %>
+          <%= image_tag "" , class:'fluffy' %>
+           <p>おはよう</p>
+        <% elsif @time = "8" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "9" %>
+           <%= image_tag "" , class:'fluffy' %>
+           <p>４５まで</p>
+        <% elsif @time = "10" %>
+           <%= image_tag "" , class:'fluffy' %>
+       <% elsif @time = "11" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "12" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "13" %>
+          <%= image_tag "" , class:'fluffy' %>
+         <% elsif @time = "14" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "15" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "16" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "17" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "18" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "19" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "20" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time = "21" %>
+          <%= image_tag "" , class:'fluffy' %>
+          <p>４５まで</p>
+        <% elsif @time >= "22" and @time <= "24" %>
+          <%= image_tag "" , class:'fluffy' %>
+           <p>寝てる</p>
+        <% else %>         
+          <%= image_tag "" , class:'fluffy' %>
+          <p>それ以外</p>
+        <% end %>      
+</div>
+ 
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Onaka</th>
+      <th>Kigen</th>
+      <th>Image</th>
+      <th>Pr</th>
+      <th>Yobip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.name %></td>
+        <td><%= dog.onaka %></td>
+        <td><%= dog.kigen %></td>
+        <td><%= dog.image %></td>
+        <td><%= dog.pr %></td>
+        <td><%= dog.yobip %></td>
+        <td><%= link_to 'Show', dog %></td>
+        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
+        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dog', new_dog_path %>

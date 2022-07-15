@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_02_202714) do
+ActiveRecord::Schema.define(version: 2022_07_15_201613) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -61,6 +61,17 @@ ActiveRecord::Schema.define(version: 2022_07_02_202714) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "dogs", force: :cascade do |t|
+    t.string "name"
+    t.integer "onaka"
+    t.integer "kigen"
+    t.string "image"
+    t.string "pr"
+    t.integer "yobip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "families", force: :cascade do |t|
     t.string "family_name"
     t.string "image"
@@ -68,6 +79,21 @@ ActiveRecord::Schema.define(version: 2022_07_02_202714) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "point"
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "kind"
+    t.text "pr"
+    t.integer "user_id"
+    t.text "letter"
+    t.text "letter2"
+    t.text "letter3"
+    t.string "zzimage"
+    t.string "runimage"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "scores", force: :cascade do |t|
