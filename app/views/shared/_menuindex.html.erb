@@ -8,18 +8,22 @@
 <!--facebookから持ってくるゾーン-->
   <div class="imagezone">
       
-         
+          <% if cook.image.attached? %>
+            <%= image_tag cook.image ,class: 'cook-image' %>
+          <% else %>
+            <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
+          <% end %>
           <p class = "standby"><%= cook.standby %></p>
 
      <!--ここからローカルimage-->   
-      <% if cook.id == 56 %>
+      <!--<% if cook.id == 56 %>
           <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293883763_5286129818147165_295546079875806176_n.jpg?stp=cp1_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=nbrgE2YCalsAX_0wQE0&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT8ToZghHBIIPS7AQI8pe0Nx_EWwMOGGC5QSEbVC--kDiQ&oe=62D4DD19" , class:'cook-image'  %>
         <% elsif cook.id == 54%>
           <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/292672456_5286130034813810_1413278315597074601_n.jpg?stp=cp1_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=plaHA0Q98m4AX-qYyOP&_nc_ht=scontent-nrt1-1.xx&oh=00_AT9FfPKaG4YS5ozZV7pLLI8BjSb51fbkcZXNb1dM2Tys0Q&oe=62D5F379" , class:'cook-image' %>
         
         <% else %>
           <%= image_tag "no-image.user.png" , class:'cook-image'  %>
-        <% end %>
+        <% end %>-->
      <!--ここまで>-->
   </div>
  <!--ここまで-->       
