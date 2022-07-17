@@ -22,7 +22,11 @@
 }
 .mainrdogs {
   text-align: center;
-  background-color: rgb(249, 249, 249) e;
+  background-image: url(https://media.istockphoto.com/vectors/illustration-of-interior-japanesestyle-room-vector-id803594574?k=20&m=803594574&s=612x612&w=0&h=HhEY9QrPkRwe4m6piTZGsEEoNeLEMT-hzLdmUfBzqNo=);
+  background-position: center !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,5 +165,87 @@ img {
   }
   100% {
     transform: scale(1, 1) translate(0%, 0%);
+  }
+}
+
+//天気　背景
+
+.maini {
+  position: relative;
+}
+//夏　雨
+.img_rain_summer {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-image: url(https://thumb.ac-illust.com/b1/b19d65db08e18112a054253584ffd911_t.jpeg);
+  background-position: center !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100vh;
+}
+.img_rain_summer::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+//夏　晴れ
+.img_funny_summer {
+  background-image: url(http://1.bp.blogspot.com/-tdOvJrXmY84/UnIEQKUnoFI/AAAAAAAAaBQ/RU7rXchzkP4/s800/room_washitsu.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.img_funny_summer::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+
+//俳句
+.ikku {
+  padding-top: 70px;
+}
+
+.simonoku td {
+  background-color: whitesmoke;
+  opacity: 0;
+  animation: rankpoint1 3s ease forwards;
+  animation-delay: 3s;
+  font-family: cursive !important;
+  font-size: 20px !important;
+}
+@keyframes simonoku {
+  100% {
+    opacity: 1;
+  }
+}
+
+.nakanoku td {
+  background-color: whitesmoke;
+  opacity: 0;
+  animation: rankpoint2 3s ease forwards;
+  animation-delay: 2.5s;
+  font-family: cursive !important;
+  font-size: 20px !important;
+}
+@keyframes nakanoku {
+  100% {
+    opacity: 1;
+  }
+}
+
+.kaminoku td {
+  background-color: whitesmoke;
+  opacity: 0;
+  animation: rankpoint3 3s ease forwards;
+  animation-delay: 0.5s;
+  font-family: cursive !important;
+  font-size: 20px !important;
+}
+@keyframes kaminoku {
+  100% {
+    opacity: 1;
   }
 }

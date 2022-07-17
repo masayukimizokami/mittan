@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :dogs
+  resources :apples
+  resources :cats
+  resources :dogs do
+    collection do
+      get 'top'
+    end
+  end
   resources :scores
   resources :points
   resources :dogruns

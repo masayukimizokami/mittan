@@ -6,6 +6,7 @@ class DogsController < ApplicationController
   def index
     @dogs = Dog.all
     @time = Time.now.strftime('%H')
+    @date = Time.now.strftime('%d')
   end
 
   # GET /dogs/1 or /dogs/1.json
@@ -67,6 +68,6 @@ class DogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dog_params
-      params.require(:dog).permit(:name, :onaka, :kigen, :image, :pr, :yobip)
+      params.require(:dog).permit(:name, :onaka, :kigen, :image, :pr, :yobip, :kaminoku, :nakanoku, :simonoku)
     end
 end

@@ -1,15 +1,5 @@
 <%= form_with(model: dog) do |form| %>
-  <% if dog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(dog.errors.count, "error") %> prohibited this dog from being saved:</h2>
-
-      <ul>
-        <% dog.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+ 
 
   <div class="field">
     <%= form.label :name %>
@@ -39,6 +29,21 @@
   <div class="field">
     <%= form.label :yobip %>
     <%= form.number_field :yobip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kaminoku %>
+    <%= form.text_field :kaminoku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nakanoku %>
+    <%= form.text_field :nakanoku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :simonoku %>
+    <%= form.text_field :simonoku %>
   </div>
 
   <div class="actions">

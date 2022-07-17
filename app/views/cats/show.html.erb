@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kami:</strong>
+  <%= @cat.kami %>
+</p>
+
+<p>
+  <strong>Naka:</strong>
+  <%= @cat.naka %>
+</p>
+
+<p>
+  <strong>Simo:</strong>
+  <%= @cat.simo %>
+</p>
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> |
+<%= link_to 'Back', cats_path %>

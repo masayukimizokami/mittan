@@ -1,0 +1,32 @@
+<%= form_with(model: apple) do |form| %>
+  <% if apple.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apple.errors.count, "error") %> prohibited this apple from being saved:</h2>
+
+      <ul>
+        <% apple.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :kami %>
+    <%= form.text_field :kami %>
+  </div>
+
+  <div class="field">
+    <%= form.label :naka %>
+    <%= form.text_field :naka %>
+  </div>
+
+  <div class="field">
+    <%= form.label :simo %>
+    <%= form.text_field :simo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
