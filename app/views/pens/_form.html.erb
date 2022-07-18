@@ -1,0 +1,21 @@
+<%= form_with(model: pen) do |form| %>
+  <% if pen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pen.errors.count, "error") %> prohibited this pen from being saved:</h2>
+
+      <ul>
+        <% pen.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :simonoku_pen %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録" %>
+  </div>
+<% end %>

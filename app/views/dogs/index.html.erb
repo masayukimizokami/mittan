@@ -1,39 +1,44 @@
 <p id="notice"><%= notice %></p>
 <div class="ikku">
-<h5>やよっちの一句</h5>
+ <% if (@time >= "00" and @time <= "05") || ( @time >= "22" and @time <= "24")%>
+  <h5>睡眠中。。。</h5><br>
+  <h6>Zzz..</h6>
+ <% else %>
+<h5>やよっちの一句</h5><br>
 <table class="kaminoku">
 <tbody>
     <% @randamdog.each do |dog| %>
+
       <tr>
         <td><%= dog.kaminoku %></td>
         </tr>
     <% end %>
   </tbody>
 </table>
-
 <table class="nakanoku">
-<tbody>
-    <% @randamdog2.each do |dog| %>
-      <tr>
-        <td><%= dog.nakanoku %></td>
-        </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<table class="simonoku">
 <tbody>
     <% @randamdog3.each do |dog| %>
       <tr>
-        <td><%= dog.simonoku %></td>
+        <td><%= dog.nakanoku_pig %></td>
         </tr>
     <% end %>
   </tbody>
 </table>
+<table class="simonoku">
+<tbody>
+    <% @randamdog2.each do |dog| %>
+      <tr>
+        <td><%= dog.simonoku_pen%></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
 </div>
-<%= @time %>
+<!--<%= @time %>
 <%= @date %>
-<!--<div class="bgi">
+<div class="bgi">
  <% if (@date >= "16" and @time <= "18") || (@date >= "24" and @time <= "27") %>
  <p>雨</p>
   <div class="img_rain_summer"></div>
@@ -43,70 +48,74 @@
 <% end %>
  <div class = "room-show-image">
  </div>-->
+ <br>
+  <div class="imgcom">
         <% if @time >= "00" and @time <= "05" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292691631_5289099191183561_5056513170435251074_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=1fglO3br-CcAX9sRPHG&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-ypzY6eMlDz_sAmaB_JDBx-Wfwifbor4Yi1yG_dKB94A&oe=62D7B085" , class:'fluffy' %>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293640741_5298163583610455_3030325070444634225_n.jpg?stp=cp1_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xv4ibDF2cc8AX9H0hg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_B14tNEe5JDpaPNX-fuyPFAkXsrAR760OWMZdS02-a9g&oe=62DA7D6A" , class:'fluffy' %>
           <p class="dogcom">寝てる</p>
         <% elsif @time == "06" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292869923_5289100537850093_6910501712646870992_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=103&ccb=1-7&_nc_sid=da31f3&_nc_ohc=vD6fmyYpYcQAX-TCtTx&_nc_ht=scontent.fkix2-2.fna&oh=00_AT9uw6iC6jqRfJUyBRA_v3knXGhDIV0Rs580DcquvFCc0w&oe=62D5E750" , class:'fluffy' %>
-          <p class="dogcom">寝てる</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293454745_5298164980276982_8551386858655934760_n.jpg?stp=cp1_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6Id8qBTtWDsAX-0IPY_&_nc_ht=scontent-nrt1-1.xx&oh=00_AT8Tfer8lEQ2PnEcWd5kyBUDjjIsYGQ69Mmv9lqhBUQ95A&oe=62D9E5CD" , class:'fluffy' %>
+          <p class="dogcom">起きた！</p>
         <% elsif @time == "07" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292819204_5289100544516759_6053057834894433265_n.jpg?stp=c69.0.414.415a_cp1_dst-jpg_p552x414&_nc_cat=102&ccb=1-7&_nc_sid=da31f3&_nc_ohc=ygQlh6vJ0i4AX9K9JGD&_nc_ht=scontent.fkix2-2.fna&oh=00_AT83BgmhfhUSBVwcYbbIcDZpb3P4p_8IgDVAxprPa7FQGQ&oe=62D7AE30" , class:'fluffy' %>
-           <p>おはよう</p>
+          <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/293502151_5298163660277114_417593753533662794_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TPnwA0UO630AX-Rb-Cn&_nc_ht=scontent.fkix2-1.fna&oh=00_AT-mSQcL89GyXdFTTDcUccgwz7WV8KWrRBlrDSM3qIVSbw&oe=62DB9D45" , class:'fluffy' %>
+           <p>おはよう！</p>
         <% elsif @time == "08" %>
-          <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/292721951_5289100104516803_2290301538458427176_n.jpg?stp=c0.45.405.405a_cp1_dst-jpg_p180x540&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_ohc=D7zre9jYKVgAX9Un6y3&_nc_ht=scontent.fkix2-1.fna&oh=00_AT8md0BhO-jaF_jlwrZqcbxGl6qjvb8rm1ppYRaQo7_NdA&oe=62D6B07A" , class:'fluffy' %>
-          <p>楽しい</p>
+          <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/293457478_5298165120276968_2124489922723742630_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=kWVimHkfukYAX8koroB&_nc_ht=scontent.fkix2-1.fna&oh=00_AT-WpYKf0gnDb-Z1lLKmZghCkd8F_CZYc2f915od6_TqdQ&oe=62DAFDD9" , class:'fluffy' %>
+          <p>今日も楽しい！</p>
         <% elsif @time == "09" %>
-           <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/292690275_5289100434516770_4522125725118903905_n.jpg?stp=c69.0.414.415a_cp1_dst-jpg_p552x414&_nc_cat=111&ccb=1-7&_nc_sid=da31f3&_nc_ohc=v0SrNyk_SG4AX-OIlDb&_nc_ht=scontent.fkix2-1.fna&oh=00_AT-DXr16U5X1yEBrGZoCV4EEBu91byKcgkg5iADXNbZuig&oe=62D6FC93" , class:'fluffy' %>
-           <p>４５まで</p>
+           <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/294791071_5298162896943857_5603755217882512849_n.jpg?stp=cp1_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Fz1dqjq9n0oAX9vbY7U&_nc_ht=scontent-nrt1-1.xx&oh=00_AT9wSpfabinvnWdySWk2MyzP0_bcdlhGmh4NIQd51VNxBw&oe=62DABCB7" , class:'fluffy' %>
+           <p>お腹すいた！</p>
         <% elsif @time == "10" %>
-           <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/292882771_5289099854516828_6084991699917806140_n.jpg?stp=c0.122.1108.1108a_cp1_dst-jpg_s552x414&_nc_cat=104&ccb=1-7&_nc_sid=da31f3&_nc_ohc=oF1oqFFwIWEAX8AzCVb&_nc_ht=scontent.fkix2-1.fna&oh=00_AT9PjsLhGQ9mkjjHBfLukntsUaaPEwoNHeu8WElHynFdFg&oe=62D5F11B" , class:'fluffy' %>
+           <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/293467985_5298164313610382_2956916912489281578_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=DSMjDaehyDkAX923fQQ&_nc_ht=scontent.fkix2-1.fna&oh=00_AT-QFtRmIzkTo6Qx_YpPaMuGf0s_Pz5ig_xe7zPR4D7Djw&oe=62DA3E05" , class:'fluffy' %>
+            <p>あそぼおー！</p>
        <% elsif @time == "11" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292491722_5289100411183439_4243039285587172538_n.jpg?stp=c0.45.405.405a_cp1_dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_ohc=Z1IfJ0BBPWwAX9Z5O0D&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-TJO-nd1xhvZdPIjoly-_fv7UYKJY74fFFEAY0xPEffA&oe=62D776EB" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293622443_5298163576943789_5125077285342897789_n.jpg?stp=cp1_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pQLVPR74r8AAX-Dj43A&_nc_ht=scontent-nrt1-1.xx&oh=00_AT-zalZJ_R2HwNsrq7PyOowR6Uo_962hq2j-y4oa2demgA&oe=62DB94CE" , class:'fluffy' %>
+          <p>ちゃっぷる！</p>
         <% elsif @time == "12" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292638071_5289099851183495_4155332831085812828_n.jpg?stp=c161.0.414.414a_cp1_dst-jpg_p552x414&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=dJFhce62SNkAX_evY6T&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8f5xDkTRvFw3Rxy6RQ2Ps8wp3hI6LvRfSqsm-0Cjpz0w&oe=62D6B89B" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293536084_5298165106943636_6085645538829929035_n.jpg?stp=cp1_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=fC_bHqYehYYAX_1iO11&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_w8VvoptdAwindQTkYdMoAe38o2Dv0SrMkIHgTtJpQjQ&oe=62DB0306" , class:'fluffy' %>
+          <p>ウェイ！</p>
         <% elsif @time == "13" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292719333_5289100077850139_6216013883917125114_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=w0fI280weoQAX-8ng_W&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8eVGlc5cojwaRskuVuk-oHmvhLk1hC13FKJAOl28vong&oe=62D6CE18" , class:'fluffy' %>
+          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/293497097_5298163770277103_7965761742036258224_n.jpg?stp=cp1_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=vZhN5ceIk98AX_wtV5p&_nc_ht=scontent.fkix2-2.fna&oh=00_AT_fo2bP-IKVyySITh5IEzCvcfd-QSTCODWpfGv1JuqnmQ&oe=62D9F2C6" , class:'fluffy' %>
+          <p>蒸すね</p>
          <% elsif @time == "14" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292790260_5289099737850173_6186234424915113529_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_ohc=qNVg12Wrd8kAX9n4oUY&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-BesFEuxE7YRzxHVyeeldihOfEwWFYM352c-lnU3Pmww&oe=62D5FC71" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/294635217_5298161543610659_2915371263868299034_n.jpg?stp=cp1_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=EbxULcgvo_sAX-JUCMR&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT9aAIuKbUGJ-ivZPnObkiwSM8WOHVbyz6jhmPuXvsTy8g&oe=62DAC755" , class:'fluffy' %>
+          <p>お昼寝したい</p>
         <% elsif @time == "15" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292632276_5289099721183508_7894621820919200829_n.jpg?stp=c0.277.1080.1080a_cp1_dst-jpg_s552x414&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=2ikG99w_V3QAX_OWkZb&_nc_ht=scontent.fkix2-2.fna&oh=00_AT_y-z0x4NP6KxAe4ojl1eQ5yuR5vwZvExfX5gmV17It9w&oe=62D79E4B" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/294762835_5298163186943828_835320293909070214_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=LymNJxBGZt4AX-hmFvr&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent.fkix2-1.fna&oh=00_AT9CNqR_e6uLrvBZeuqcN-H_7CT-OHPiDkFrRVmp3Jz6GA&oe=62DB796E" , class:'fluffy' %>
+          <p>散歩したい</p>
         <% elsif @time == "16" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292700774_5289099637850183_1266518826835953426_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=100&ccb=1-7&_nc_sid=da31f3&_nc_ohc=sv7UkoGxvOgAX-9Eb0V&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8k5akX_ZUIRkL3Inlov7v2f8fQK3Hwlu4FzZxWoe30ng&oe=62D61D72" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/294707589_5298162886943858_2093546890997747945_n.jpg?stp=cp1_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pjw5RTvL5IYAX9_T7dc&_nc_ht=scontent-nrt1-1.xx&oh=00_AT8fGJi9_2BK9AOcGHfohsnNBOwkNh2eYPWLBn0xMhvOjQ&oe=62DB7180" , class:'fluffy' %>
+          <p>もうこんな時間</p>
         <% elsif @time == "17" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292890992_5289099604516853_5457164796538070043_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_ohc=U8etLUoWvOsAX-fi1TD&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8ONFQmuRyWRvpl4qoARGIcfQd3jizmUX6551A24aa6Ww&oe=62D64818" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/293464712_5298164653610348_2716336686569037748_n.jpg?stp=cp1_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=59HpmP9gV3gAX_tluIr&_nc_ht=scontent.fkix2-1.fna&oh=00_AT-pV-R53x96_6xsKS0pOgEU0KQo4aLrQvRdVBQbfVLuKg&oe=62DBA0E1" , class:'fluffy' %>
+          <p>お腹すいてきた</p>
         <% elsif @time == "18" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292779654_5289099497850197_941184396425252107_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=AWaoTwNy6dQAX9ICvb7&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-lLR7au2G-dWX-1bfJpWzRbe94eACIXf3j85q7FZVVOw&oe=62D69177" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/293554660_5298165010276979_161028806517491684_n.jpg?stp=cp1_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=06D33BSXYSUAX9B9J8Z&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8dO2g6D22F7qgJ8hXWQADLRycUYlIDw39ZhrfilRIDaQ&oe=62DA666E" , class:'fluffy' %>
+          <p>誰がカレーパンやねん</p>
         <% elsif @time == "19" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292685908_5289099511183529_6665102384110971595_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=100&ccb=1-7&_nc_sid=da31f3&_nc_ohc=-R0PczkXhaEAX-XLiJU&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent.fkix2-2.fna&oh=00_AT_niJ4yEBXRtcpkWB3OZTGAwto84ngKnSTCXFLlP5Y3uA&oe=62D6AC5E" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293552549_5298163663610447_2676794087781921331_n.jpg?stp=cp1_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=-CdIOCry1cEAX9IcpOM&_nc_ht=scontent-nrt1-1.xx&oh=00_AT8DSRKdzuIdDPneBeoFkWnwe95zVQJ2AYw7ttaQdYjfow&oe=62DBC3B6" , class:'fluffy' %>
+          <p>そろそろまち帰ってくる</p>
         <% elsif @time == "20" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292799703_5289099404516873_7034056433683024732_n.jpg?stp=c161.0.414.414a_cp1_dst-jpg_p552x414&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=U5CJ_5h0krAAX-8CNcq&_nc_ht=scontent.fkix2-2.fna&oh=00_AT9-o697KbXPEr-4quTsO4Zun7ZhMy_IX5pWmvQcixJ3eA&oe=62D5E936" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/293747619_5298163773610436_898610956087283432_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Z6Q_qNFa848AX8y_a2r&_nc_oc=AQlE0UvmrYXootrlnVWBOkn2pbf0An5_DKCcsdrk_yBA3eEs0Azowo5-4ivDMx2GQgsMPKlogg8J5iyllWZzG4lK&_nc_ht=scontent.fkix2-1.fna&oh=00_AT_aCBqxXCZv6HNPP6FcNySbSVx0662xa14SYWyKFFhWig&oe=62D9E796" , class:'fluffy' %>
+          <p>今日のテレビは、、と</p>
         <% elsif @time == "21" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292630512_5289099291183551_8472993088532733375_n.jpg?stp=c69.0.414.415a_cp1_dst-jpg_p552x414&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=Zm7gal3VWXQAX8Z0BFk&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8fVkZHsYWhrhwLi6bd3tx0_V_tZJyMu88wAJxkgXu-6Q&oe=62D6E054" , class:'fluffy' %>
-          <p>４５まで</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293472737_5298163996943747_7363901824361396943_n.jpg?stp=cp1_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=0kV6Ont2xXEAX9ihNQ-&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT-ciOE0ed1XgDn5ePyw7DNdP0AWhr-j4LMH8Kl0uFl3pw&oe=62DA8F01" , class:'fluffy' %>
+          <p>眠たくなってきた。</p>
         <% elsif @time >= "22" and @time <= "24" %>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292691631_5289099191183561_5056513170435251074_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=1fglO3br-CcAX9sRPHG&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-ypzY6eMlDz_sAmaB_JDBx-Wfwifbor4Yi1yG_dKB94A&oe=62D7B085" , class:'fluffy' %>
-           <p>寝てる</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293806424_5298164056943741_8683292550646853939_n.jpg?stp=cp1_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=DPDnssd0Xy8AX8KtQYU&_nc_ht=scontent-nrt1-1.xx&oh=00_AT9VfFeJCMjGkA3-wTEXK8F2lmQENgzMsTThqeMzgEDm1g&oe=62DB9636" , class:'fluffy' %>
+           <p>おやすみ〜</p>
         <% else %>         
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/292736506_5289099277850219_886204498922536459_n.jpg?stp=c0.277.1080.1080a_dst-jpg_s552x414&_nc_cat=100&ccb=1-7&_nc_sid=da31f3&_nc_ohc=jQta8aDbtpMAX99iwsU&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-eOrpSnWOGbbTKkfgnNbQXGFIamShgSgHkisXfyysa6A&oe=62D6DE38" , class:'fluffy' %>
-          <p>それ以外</p>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293640741_5298163583610455_3030325070444634225_n.jpg?stp=cp1_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xv4ibDF2cc8AX9H0hg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_B14tNEe5JDpaPNX-fuyPFAkXsrAR760OWMZdS02-a9g&oe=62DA7D6A" , class:'fluffy' %>
+          <p>意外な答えだね</p>
         <% end %>      
 </div>
  
-<% @dogs.each do |dog| %>
+<!--<% @dogs.each do |dog| %>
 
  <%= link_to '編集', edit_dog_path(dog) %>
  <% end %>
 
-<!--<table>
+<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -117,7 +126,7 @@
       <th>Yobip</th>
       <th colspan="3"></th>
     </tr>
-  </thead>-->
+  </thead>
 
   <tbody>
     <% @dogs.each do |dog| %>
@@ -135,7 +144,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table>-->
 
 <br>
-<%= link_to 'New Dog', new_dog_path %>
+<%= link_to '一句読む', new_dog_path %>

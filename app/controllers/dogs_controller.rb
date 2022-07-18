@@ -5,9 +5,11 @@ class DogsController < ApplicationController
   # GET /dogs or /dogs.json
   def index
     @dogs = Dog.all
+    @nakanokus = Pen.all
+    @simonokus = Pig.all
     @randamdog = @dogs.order("RANDOM()").limit(1)
-    @randamdog2 = @dogs.order("RANDOM()").limit(1)
-    @randamdog3 = @dogs.order("RANDOM()").limit(1)
+    @randamdog2 = @nakanokus.order("RANDOM()").limit(1)
+    @randamdog3 = @simonokus.order("RANDOM()").limit(1)
     @time = Time.now.strftime('%H')
     @date = Time.now.strftime('%d')
   end
@@ -31,7 +33,7 @@ class DogsController < ApplicationController
 
     respond_to do |format|
       if @dog.save
-        format.html { redirect_to dog_url(@dog), notice: "Dog was successfully created." }
+        format.html { redirect_to new_pig_path, notice: "Dog was successfully created." }
         format.json { render :show, status: :created, location: @dog }
       else
         format.html { render :new, status: :unprocessable_entity }

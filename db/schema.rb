@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_17_203645) do
+ActiveRecord::Schema.define(version: 2022_07_18_212431) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -84,6 +84,12 @@ ActiveRecord::Schema.define(version: 2022_07_17_203645) do
     t.integer "point"
   end
 
+  create_table "pens", force: :cascade do |t|
+    t.string "simonoku_pen"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -95,6 +101,12 @@ ActiveRecord::Schema.define(version: 2022_07_17_203645) do
     t.text "letter3"
     t.string "zzimage"
     t.string "runimage"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pigs", force: :cascade do |t|
+    t.string "nakanoku_pig"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

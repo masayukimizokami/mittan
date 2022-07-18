@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pigs
+  resources :pens
   resources :apples
   resources :cats
   resources :dogs do
