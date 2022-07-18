@@ -3,7 +3,7 @@
 <h5>やよっちの一句</h5>
 <table class="kaminoku">
 <tbody>
-    <% @dogs.each do |dog| %>
+    <% @randamdog.each do |dog| %>
       <tr>
         <td><%= dog.kaminoku %></td>
         </tr>
@@ -13,7 +13,7 @@
 
 <table class="nakanoku">
 <tbody>
-    <% @dogs.each do |dog| %>
+    <% @randamdog2.each do |dog| %>
       <tr>
         <td><%= dog.nakanoku %></td>
         </tr>
@@ -23,7 +23,7 @@
 
 <table class="simonoku">
 <tbody>
-    <% @dogs.each do |dog| %>
+    <% @randamdog3.each do |dog| %>
       <tr>
         <td><%= dog.simonoku %></td>
         </tr>
@@ -138,4 +138,4 @@
 </table>
 
 <br>
-<!--<%= link_to 'New Dog', new_dog_path %>-->
+<%= link_to 'New Dog', new_dog_path %>

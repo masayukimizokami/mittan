@@ -5,6 +5,9 @@ class DogsController < ApplicationController
   # GET /dogs or /dogs.json
   def index
     @dogs = Dog.all
+    @randamdog = @dogs.order("RANDOM()").limit(1)
+    @randamdog2 = @dogs.order("RANDOM()").limit(1)
+    @randamdog3 = @dogs.order("RANDOM()").limit(1)
     @time = Time.now.strftime('%H')
     @date = Time.now.strftime('%d')
   end
