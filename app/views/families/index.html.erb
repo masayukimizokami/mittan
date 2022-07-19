@@ -40,8 +40,8 @@
       <tr>
         <td><span id = "rank">1位</span></td>
         <% if family.image.attached? %>
-        <!--<%= render 'shared/familyimg' %>-->
-        <td><%= image_tag family.image ,class: 'cook-image' %></td>
+        <td><%= render 'shared/familyimg' %></td>
+        <!--<td><%= image_tag family.image ,class: 'cook-image' %></td>-->
         <% else %>
         <% end %>
         <td><span id = "rankname"><%= family.family_name %></span></td>
@@ -66,6 +66,7 @@
          <td><span id = "rank">2位</span></td>
         <% if family.image.attached? %>
         <td><%= image_tag family.image ,class: 'cook-image' %></td>
+        
         <% else %>
         <% end %>
         <td><span id = "rankname"><%= family.family_name %></span></td>

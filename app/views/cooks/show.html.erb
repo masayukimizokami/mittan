@@ -12,11 +12,7 @@
   <%= Rinku.auto_link(@cook.cookurl, :all, 'target="_blank"').html_safe %>
 </p>
 
-<% if @cook.image.attached? %>
-    <%= image_tag @cook.image ,class: 'cook-show-image' %>
-<% else %>
-    <%= image_tag 'no-image.user.png' ,class: 'cook-show-image'%>
-<% end %>
+<%= render 'shared/menushow' %>
 <table>
 <tr>
 <p>
