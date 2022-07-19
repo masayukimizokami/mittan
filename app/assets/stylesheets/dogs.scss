@@ -249,3 +249,57 @@ img {
     opacity: 1;
   }
 }
+
+//散歩
+.walkimg {
+  margin: 0 0 0;
+}
+.loop_wrap {
+  display: flex;
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.loop_wrap img {
+  width: auto;
+  height: 100%;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+.loop_wrap img:first-child {
+  animation: loop 20s -2s linear infinite;
+}
+
+.loop_wrap img:last-child {
+  animation: loop2 15s linear infinite;
+}
+.walking {
+  background-color: whitesmoke;
+  opacity: 0;
+  animation: rankpoint1 3s ease forwards;
+  animation-delay: 5s;
+  font-family: cursive !important;
+  font-size: 20px !important;
+}
+@keyframes walking {
+  100% {
+    opacity: 1;
+  }
+}
