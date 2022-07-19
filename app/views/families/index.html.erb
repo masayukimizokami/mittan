@@ -40,6 +40,7 @@
       <tr>
         <td><span id = "rank">1位</span></td>
         <% if family.image.attached? %>
+        <!--<%= render 'shared/familyimg' %>-->
         <td><%= image_tag family.image ,class: 'cook-image' %></td>
         <% else %>
         <% end %>

@@ -8,16 +8,16 @@
 <!--facebookから持ってくるゾーン-->
   <div class="imagezone">
       
-          <% if cook.image.attached? %>
+          <!--<% if cook.image.attached? %>
             <%= image_tag cook.image ,class: 'cook-image' %>
           <% else %>
             <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
-          <% end %>
-          <p class = "standby"><%= cook.standby %></p>
+          <% end %>-->
+          
 
      <!--ここからローカルimage-->   
      <!--<div class="10から20">-->
-      <!--<% if (cook.id >= 10) and (cook.id <= 20)  %>
+      <% if (cook.id >= 10) and (cook.id <= 20)  %>
         <% if cook.id == 10 %>
           <%= image_tag "" , class:'cook-image'  %>
         <% elsif cook.id == 11%>
@@ -194,7 +194,8 @@
           <%= image_tag "no-image.user.png" , class:'cook-image'  %>
         <% end %>
       
-      <% end %>-->
+      <% end %>
+      <p class = "standby"><%= cook.standby %></p>
      <!--ここまで>-->
   </div>
  <!--ここまで-->       
