@@ -12,10 +12,20 @@ class DogsController < ApplicationController
     @randamdog3 = @simonokus.order("RANDOM()").limit(1)
     @time = Time.now.strftime('%H')
     @date = Time.now.strftime('%d')
+    @min = Time.now.strftime('%M')
   end
 
   # GET /dogs/1 or /dogs/1.json
   def show
+  end
+
+  def food
+  end
+
+  def walk
+  end
+
+  def snack
   end
 
   # GET /dogs/new

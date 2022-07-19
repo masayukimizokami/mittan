@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="ikku">
+<%= @min%>
  <% if (@time >= "00" and @time <= "05") || ( @time >= "22" and @time <= "24")%>
   <h5>睡眠中。。。</h5><br>
   <h6>Zzz..</h6>
@@ -145,6 +146,14 @@
     <% end %>
   </tbody>
 </table>-->
-
+<br>
+<% if (@min == "06") || (@min == "09") %>
+<%= link_to 'ご飯', food_dogs_path %>
+<% elsif @min == "54" %>
+<%= link_to '散歩', walk_dogs_path %>
+<% elsif (@min == "16") || (@min == "27")  %>
+<%= link_to 'おやつ', snack_dogs_path %>
+<% else %>
+<% end %>
 <br>
 <%= link_to '一句読む', new_dog_path %>

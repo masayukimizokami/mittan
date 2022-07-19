@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :cats
   resources :dogs do
     collection do
-      get 'top'
+      get 'food'
+      get 'walk'
+      get 'snack'
     end
   end
   resources :scores
