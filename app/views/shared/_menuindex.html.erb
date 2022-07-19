@@ -17,7 +17,7 @@
 
      <!--ここからローカルimage-->   
      <!--<div class="10から20">-->
-      <% if (cook.id >= 10) and (cook.id <= 20)  %>
+      <!--<% if (cook.id >= 10) and (cook.id <= 20)  %>
         <% if cook.id == 10 %>
           <%= image_tag "" , class:'cook-image'  %>
         <% elsif cook.id == 11%>
@@ -54,7 +54,7 @@
         <% elsif cook.id == 24%>
           <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293584425_5299060190187461_4446645602755918764_n.jpg?stp=cp1_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=egLq3x4zdCwAX9HnfEZ&_nc_ht=scontent-nrt1-1.xx&oh=00_AT-2aM6-gpD3TmT-_3zttYz1ZjrO5xJFFQnn9Y-owlRSwQ&oe=62DB065E" , class:'cook-image' %>
         <% elsif cook.id == 25%>
-          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/294784090_5299059523520861_5432324668928871559_n.jpg?stp=cp1_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=WCnOQQwRG38AX8XOduu&_nc_oc=AQlp-FFiu6YrsNwhad3zpGXOaWt4g3shtc4JZ6iaChIwg1v28A6i4EmoayWsfoCJ7YbdPP-KxKIO6k8ad7ebzgf_&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_YxmlkCWDOGP1ecSwNgrDZZ_8uyfoH0hAEL8P9XueYKA&oe=62DBAE13" , class:'cook-image' %>
+          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/294288917_5299059563520857_4435341058462230724_n.jpg?stp=cp1_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pCyEfLh3CqEAX-QCMHT&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-2SOUm9e5R3SOxHJzP3U_SB28zAASbshs7GMBddqe4Qw&oe=62DB05DB" , class:'cook-image' %>
         <% elsif cook.id == 26%>
           <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/293605242_5299060023520811_4371105199701019213_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=-Qv6H-4GNvsAX8Iz42N&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_tLRG9U640rlA1OGzMSj8FYU8W92CJrJ0ubPFEl5s3ew&oe=62DB5DB0" , class:'cook-image' %>
         <% elsif cook.id == 27%>
@@ -62,7 +62,7 @@
         <% elsif cook.id == 28%>
           <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/294357573_5299059753520838_1026436476198187390_n.jpg?stp=cp1_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=nwaw7wRYaAMAX8PRjev&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-Cr97Ydtrh_DeEqrPqRy9TR0CFa4qJfSygUTHLT_xxoQ&oe=62DAB5E4" , class:'cook-image' %>
         <% elsif cook.id == 29%>
-          <%= image_tag "https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/294288917_5299059563520857_4435341058462230724_n.jpg?stp=cp1_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pCyEfLh3CqEAX-QCMHT&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-2SOUm9e5R3SOxHJzP3U_SB28zAASbshs7GMBddqe4Qw&oe=62DB05DB" , class:'cook-image' %>
+          <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/294784090_5299059523520861_5432324668928871559_n.jpg?stp=cp1_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=WCnOQQwRG38AX8XOduu&_nc_oc=AQlp-FFiu6YrsNwhad3zpGXOaWt4g3shtc4JZ6iaChIwg1v28A6i4EmoayWsfoCJ7YbdPP-KxKIO6k8ad7ebzgf_&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_YxmlkCWDOGP1ecSwNgrDZZ_8uyfoH0hAEL8P9XueYKA&oe=62DBAE13" , class:'cook-image' %>
         <% elsif cook.id == 30%>
           <%= image_tag "https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/294764109_5299059650187515_3342873662423881245_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=-978aQQESN0AX8NhbBK&_nc_ht=scontent-nrt1-1.xx&oh=00_AT8UkNtaW4-mQFNuSNtazRmw2xue_P6okOCCoLtAZ8nWsQ&oe=62DABCA0" , class:'cook-image' %>
         <% else %>
@@ -194,7 +194,7 @@
           <%= image_tag "no-image.user.png" , class:'cook-image'  %>
         <% end %>
       
-      <% end %>
+      <% end %>-->
      <!--ここまで>-->
   </div>
  <!--ここまで-->       
