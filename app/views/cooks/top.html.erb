@@ -10,14 +10,41 @@
         <!--左近次-->
         <!--<div class="index-comment-area">-->
               <div class = "commentleft">
-              <% @rnd.each do |family| %>
-                <%= image_tag family.image ,class: 'family-image' %>
-                <p class="family" class = "standby"><%= family.family_name %><span class="tyan">ちゃんの<br>本日の</span>一押し！</p>
+            <% @rnd.each do |family| %>
+               <% if family.id == 1 %>
+                <td><%= image_tag 'https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/294555477_5300678856692261_1666581544493358455_n.jpg?stp=cp1_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=3vXV3vBICpUAX_W9bBJ&_nc_ht=scontent.fkix2-2.fna&oh=00_AT9dDrPDW5KbV4QX9qQDEYA5CfLsl_OjrIQ5SPtLaLn0Hw&oe=62DC3EED' ,class: 'family-image' %></td>
+              <% elsif family.id == 2 %>
+                <td><%= image_tag 'https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/294036764_5300679083358905_7925074735942307962_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XLcV4EKYEJIAX_HsdgD&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-5wBu9ENMYi61AS_nJktqwRgy_toIRIqZSuKgLlLOo_A&oe=62DCDE9D' ,class: 'family-image' %></td>
+              <% elsif family.id== 3 %>
+                <td><%= image_tag 'https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/294663284_5300678890025591_4862030539951715099_n.jpg?stp=cp1_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ORPJ_R7j8s0AX9sNlDC&_nc_ht=scontent.fkix2-1.fna&oh=00_AT9HQ9xzBj3J_S1fsalwCrcOAgzefQR6gKzUYEiK0qvX8g&oe=62DB254B' ,class: 'family-image' %></td>
+              <% elsif family.id == 4 %>
+                <td><%= image_tag 'https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/293671763_5300679353358878_1735189389205635154_n.jpg?stp=cp1_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yVU9qcww8YwAX8nr3sd&_nc_ht=scontent.fkix2-2.fna&oh=00_AT_hqEAb5EQmmmtCMcuXD3JWbiZd6kPj7FyI_ygglU1xwQ&oe=62DB2F63' ,class: 'family-image' %></td>
+              <% elsif family.id == 5 %>
+                <td><%= image_tag 'https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/293867878_5300679440025536_9101265694185005635_n.jpg?stp=cp1_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7yTIExxtUgkAX8F2E5J&_nc_ht=scontent.fkix2-2.fna&oh=00_AT8Z6CMa2l2MTppnOWkJ3yf-zaUXs7u26XE8zOnvY0lq0w&oe=62DB950A'  ,class: 'family-image'%></td>
+              <% elsif family.id== 6 %>
+                <td><%= image_tag 'https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/293707472_5300678996692247_1874910380454376349_n.jpg?stp=cp1_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=iaVEq8NEdecAX9R96gG&_nc_oc=AQmxdj-szR6jvswki-0Gx2srfBYGMl0MVXdDKJO0DYWtdVp30eCua3i-jjr78SxH8rkmDt_0OU4IEJOYANRnyj8c&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent.fkix2-2.fna&oh=00_AT_ldFlONCqHWgFqmqldhVvjSFbVGuampfsJCdoyFrGHOg&oe=62DC9F23' ,class: 'family-image' %></td>
+              <% elsif family.id == 7 %>
+                <td><%= image_tag 'https://scontent.fkix2-1.fna.fbcdn.net/v/t39.30808-6/293717675_5300679466692200_7824794719023152258_n.jpg?stp=cp1_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=sFjWCOYEGIUAX_BDD83&_nc_ht=scontent.fkix2-1.fna&oh=00_AT8xSkVrtRbO3vyHTXrjDTmuOW22Ad5QswcWFh08n1FjNg&oe=62DB4B80'  ,class: 'family-image'%></td>
+              <% elsif family.id == 8 %>
+                <td><%= image_tag 'https://scontent.fkix2-2.fna.fbcdn.net/v/t39.30808-6/293631278_5300679363358877_6473532644658762074_n.jpg?stp=cp1_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=E7n6n3IggxcAX8o30hn&tn=6i6dnnQ2t_DniOg1&_nc_ht=scontent.fkix2-2.fna&oh=00_AT-3Oiz-hTtM5wXL9i689TC3wX0CBDM81VWPWZKGZAfwwA&oe=62DBD0A9'  ,class: 'family-image'%></td>
+              <% else %>
+                  <% if family.image.attached? %>
+                      <td><%= image_tag family.image ,class: 'family-image' %></td>
+                  <% else %>
+                      <td><%= image_tag "no-image.user.png" ,class: 'family-image' %></td>
+                  <% end %>
               <% end %>
-              </div>
+                <p class="family" class = "standby"><%= family.family_name %><span class="tyan">ちゃんの<br>本日の</span>一押し！</p>
+          <% end %>
+          </div>
        
                 <!--コメント-->
+
+
+
+
     <!--<div class="index-comment-area">-->
+
           <div class = "commentright">
             <% @rnddg.each do |dogrun| %>
             <br>
@@ -32,33 +59,7 @@
     </div>
 
 <!--<div class="index-comment-area">-->
-   <% @random.each do |cook| %>
-    <div class="index-comment-box">
-      <div class = "boxbr">
-        </div>
-      <div class = "boxleft">
-          <% if cook.image.attached? %>
-            <%= image_tag cook.image ,class: 'cook-image' %>
-          <% else %>
-            <%= image_tag 'no-image.user.png' ,class: 'cook-image'%>
-          <% end %>
-          <p class = "standby"><%= cook.standby %></p>
-        </div>
-        <div class = "boxright">
-            <h3><%= cook.cookname %></h3>
-            <p class = "url"><%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %></p>
-            <p><%= link_to '詳細', cook %>
-            <%= link_to '編集', edit_cook_path(cook) %>
-            <%= link_to '削除', cook, method: :delete, data: { confirm: '本当に削除しますか?' } %></p>
-            <br>
-         </div>
-         </div>
-          <% end %>
-          <!--行変えるため-->
-        <div class = "boxbr">
-        </div>
-
-</div>
+  <%= render 'shared/menuindex' %>
 
 <br>
 <%= link_to 'メニューを追加する', new_cook_path %>
