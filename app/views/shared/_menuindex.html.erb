@@ -189,7 +189,34 @@
           <% elsif cook.id == 79%>
             <%= image_tag "https://stat.ameba.jp/user_images/20220809/05/umakichisan/b1/b5/j/o0750075015158048059.jpg?caw=800" , class:'cook-image' %>
           <% elsif cook.id == 80%>
+            <%= image_tag "https://stat.ameba.jp/user_images/20220814/16/umakichisan/4d/32/j/o0491049115160543493.jpg?caw=800" , class:'cook-image' %>
+          <% else %>
+            <%= image_tag "no-image.user.png" , class:'cook-image'  %>
+          <% end %>
+
+          <% elsif (cook.id >= 81) and (cook.id <= 90)  %>
+          <% if cook.id == 81 %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20220814/16/umakichisan/2a/dc/j/o0557055715160543573.jpg?caw=800" , class:'cook-image' %>
+           <% elsif cook.id == 82%>
+            <%= image_tag "https://stat.ameba.jp/user_images/20220814/16/umakichisan/6e/e0/j/o0517051715160543612.jpg?caw=800" , class:'cook-image' %>
+           <% elsif cook.id == 83%>
+            <%= image_tag "https://stat.ameba.jp/user_images/20220814/16/umakichisan/f0/0e/j/o0750075015160543651.jpg?caw=800" , class:'cook-image' %>
+           <% elsif cook.id == 84%>
+            <%= image_tag "https://stat.ameba.jp/user_images/20220814/16/umakichisan/c6/36/j/o0750075015160543686.jpg?caw=800" , class:'cook-image' %>
+           <% elsif cook.id == 85%>
             <%= image_tag "" , class:'cook-image' %>
+           <% elsif cook.id == 86%>
+            <%= image_tag "" , class:'cook-image' %>
+           <% elsif cook.id == 87%>
+            <%= image_tag "" , class:'cook-image' %>
+           <% elsif cook.id == 88%>
+            <%= image_tag "" , class:'cook-image' %>
+           <% elsif cook.id == 89%>
+            <%= image_tag "" , class:'cook-image' %>
+           <% elsif cook.id == 90%>
+            <%= image_tag "" , class:'cook-image' %>
+
+          
           <% else %>
             <%= image_tag "no-image.user.png" , class:'cook-image'  %>
           <% end %>
