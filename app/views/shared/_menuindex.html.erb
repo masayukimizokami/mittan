@@ -250,17 +250,17 @@
            <% elsif cook.id == 102%>
             <%= image_tag "https://stat.ameba.jp/user_images/20220909/11/umakichisan/c8/f5/j/o0657065715172163124.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 103%>
-            <%= image_tag "" , class:'cook-image' %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20221011/09/umakichisan/8d/57/j/o0692069215186813655.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 104%>
-            <%= image_tag "" , class:'cook-image' %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20221011/09/umakichisan/41/0a/j/o0675067515186813691.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 105%>
-            <%= image_tag "" , class:'cook-image' %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20221011/09/umakichisan/23/88/j/o0677067715186813708.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 106%>
-            <%= image_tag "" , class:'cook-image' %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20221011/09/umakichisan/b3/c4/j/o0750075015186813778.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 107%>
-            <%= image_tag "" , class:'cook-image' %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20221011/09/umakichisan/19/78/j/o0524052415186813826.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 108%>
-            <%= image_tag "" , class:'cook-image' %>
+            <%= image_tag "https://stat.ameba.jp/user_images/20221011/09/umakichisan/db/a3/j/o0426042615186813863.jpg?caw=800" , class:'cook-image' %>
            <% elsif cook.id == 109%>
             <%= image_tag "" , class:'cook-image' %>
            <% elsif cook.id == 110%>
@@ -334,7 +334,7 @@
             <h3><%= cook.cookname %></h3>
             <p class = "url"><%= Rinku.auto_link(cook.cookurl, :all, 'target="_blank"').html_safe %></p>
             <p><%= cook.id %>
-            <%= link_to '詳細', cook %>
+            <%= link_to '詳細2', cook %>
             <%= link_to '編集', edit_cook_path(cook) %>
             <%= link_to '削除', cook, method: :delete, data: { confirm: '本当に削除しますか?' } %></p>
             <br>
